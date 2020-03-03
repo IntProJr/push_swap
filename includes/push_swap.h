@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:26:51 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/03 15:54:02 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int		main(int argc, char *argv[])
+#include "libft/headers/libft.h"
+
+typedef struct		s_op
 {
-	t_op		val;
-	int 		*stack_a;
+	int 			max;
+	int 			min;
+	int				second_min;
+	int				middle;
+	int 			size_a;
+	int 			size_b;
+	int 			v_flag;
+	int 			size;
+	int 			pow;
+	int 			*order;
+	char 			bloc[200];
+	char 			line[30];
+	char 			spaces[200];
+}					t_op;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-	return (0);
-}
+
+
+
+# endif
