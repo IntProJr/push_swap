@@ -6,27 +6,40 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 18:09:30 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/03 18:55:55 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-//static int	bonus_flag(char *argv[], t_op *val)
-//{
-//	char		*tmp;
-//
-//	if (argv[2] && (ft_strcmp(argv[2], "-v") == 0 ||
-//		ft_strcmp(argv[2], "-vz") == 0))
-//		return (-1);
-//	if (ft_strcmp(argv[1], "-v") == 0)
-//	{
-//		val->v_flag = 1;
-//		tmp = (val)->line;
-//		ft_chr_and_fill(&tmp, '-', 30);
-//	}
-//	return (0);
-//}
+/*
+** Подключение флагов визуализации. Проверка правильности написания флагов.
+** Функция возвращает ошибку при написании двух флагов одновременно.
+*/
+
+static int	bonus_flag(char *argv[], t_op *val)
+{
+	char		*tmp;
+
+	if (argv[2] && (ft_strcmp(argv[2], "-v") == 0 ||
+		ft_strcmp(argv[2], "-vz") == 0))
+		return (-1);
+	if (ft_strcmp(argv[1], "-v") == 0)
+	{
+		val->v_flag = 1;
+		tmp = (val)->line;
+		ft_chr_and_fill(&tmp, '_', 30);
+	}
+	else if (ft_strcmp(argv[1], "-vz") == 0)
+	{
+		val->v_flag = 2;
+		tmp = (val)->bloc;
+		ft_chr_and_fill(&tmp, '_', 200);
+		tmp = (val)->spaces;
+		ft_chr_and_fill(&tmp, ' ', 200);
+	}
+	return (0);
+}
 
 /*
 ** check_args: проверка на наличии входных параметров
@@ -43,11 +56,14 @@ int			main(int argc, char *argv[])
 	val.v_flag = 0;
 	if (argc == 1 || check_args(argv, argc) == 0)
 		return (ft_printf("Error\n"));
-//	if (ft_strcmp(argv[1], "-v") == 0 || ft_strcmp(argv[1], "-vz") == 0)
-//	{
-//		if ((bonus_flag(argv, &val) == -1) ||
-//		)
-//	}
+	if (ft_strcmp(argv[1], "-v") == 0 || ft_strcmp(argv[1], "-vz") == 0)
+	{
+		if ((bonus_flag(argv, &val) == -1) ||
+		(argc == 2 || (argc == 3 && argv[2][0] == '\0')))
+			return (ft_printf("Error\n"));
+		argv++;
+	}
+	val.size = parse_stack(argv, &stack_a, 'p');
 
 
 	return (0);

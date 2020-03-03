@@ -12,7 +12,7 @@
 
 #include "../headers/libft.h"
 
-int	ft_pow(int i, int pow)
+unsigned long long	ft_pow(unsigned long long i, int pow)
 {
 	int res;
 
