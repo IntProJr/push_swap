@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2019/05/21 20:16:55 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 32
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft.h"
 
-int		main(int argc, char *argv[])
-{
-	t_op		val;
-	int 		*stack_a;
+int		get_next_line(const int fd, char **line);
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
-}
+#endif

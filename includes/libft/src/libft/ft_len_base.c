@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_len_base.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/02/12 22:08:14 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/02/12 22:08:14 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../../headers/libft.h"
 
-int		main(int argc, char *argv[])
+size_t	ft_len_base(long long nb, char base)
 {
-	t_op		val;
-	int 		*stack_a;
+	size_t len;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
+	len = 1;
+	if (nb < 0)
+	{
+		len++;
+		nb = -nb;
+	}
+	while (nb >= base)
+	{
+		nb = nb / base;
+		len++;
+	}
+	return (len);
 }

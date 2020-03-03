@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2019/04/29 17:28:28 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../../headers/libft.h"
 
-int		main(int argc, char *argv[])
+char	*ft_strcpy(char *dst, const char *src)
 {
-	t_op		val;
-	int 		*stack_a;
+	size_t i;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

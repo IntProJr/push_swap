@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2019/04/17 16:55:45 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/03 16:16:46 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../../headers/libft.h"
 
-int		main(int argc, char *argv[])
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_op		val;
-	int 		*stack_a;
+	size_t i;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

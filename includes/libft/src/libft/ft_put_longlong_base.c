@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_put_longlong_base.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/02/12 22:06:58 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/02/12 22:09:26 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../../headers/libft.h"
 
-int		main(int argc, char *argv[])
+void	ft_put_longlong_base(long long nbr, char base)
 {
-	t_op		val;
-	int 		*stack_a;
+	unsigned long long nb;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
+	if (base > 1 && base <= 10)
+	{
+		if (nbr < 0)
+		{
+			ft_putchar('-');
+			if (nbr != LONG_LONG_MIN)
+				nbr *= -1;
+		}
+		nb = nbr;
+		if (nb >= (unsigned long long)base)
+			ft_put_longlong_base(nb / base, base);
+		ft_putchar(nb % base + '0');
+	}
+	else if (base == 1)
+		ft_putnchar('1', nbr);
 }

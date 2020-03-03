@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   length.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:44:10 by lrosalee         ###   ########.fr       */
+/*   Created: 2019/11/25 18:08:50 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/02/07 15:18:37 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../../../headers/ft_printf.h"
 
-int		main(int argc, char *argv[])
+int		length(char *str, char c)
 {
-	t_op		val;
-	int 		*stack_a;
+	int i;
+	int nb;
 
-	stack_a = NULL;
-	val.v_flag = 0;
-	if (argc == 1 || check_args(argv, argc) == 0)
-		return (ft_printf("Error\n"));
-
-	return (0);
+	i = 0;
+	nb = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			nb++;
+		i++;
+	}
+	return (nb);
 }
