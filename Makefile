@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/03 15:48:56 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/03 18:40:38 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC1 	=
+SRC1 	= *.c
 
-SRC2 	=
+SRC2 	= *.c
 
 OBJSFD 	= temporary
 

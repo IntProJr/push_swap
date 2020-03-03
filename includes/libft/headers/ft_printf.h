@@ -72,6 +72,7 @@ char				*integer_f(long double nb);
 char				*decimal_f(long double nb, t_printf *p, char *integer_f);
 int					write_f(t_printf p, char *integer, char *dec,
 						long double nb);
+int					print_f(va_list *arg, int char_printed, t_printf p);
 
 /*
 **  			Tools

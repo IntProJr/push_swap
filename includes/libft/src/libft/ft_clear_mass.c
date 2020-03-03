@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/libft.h"
+#include "../headers/libft.h"
 
 void	ft_clear_mass(char ***mas)
 {

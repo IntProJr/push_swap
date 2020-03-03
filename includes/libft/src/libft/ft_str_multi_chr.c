@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/libft.h"
+#include "../headers/libft.h"
 
 char	*ft_str_multi_chr(char *str, char *c)
 {

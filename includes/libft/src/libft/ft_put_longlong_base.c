@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/libft.h"
+#include "../headers/libft.h"
 
 void	ft_put_longlong_base(long long nbr, char base)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_printf.h"
+#include "ft_printf.h"
 
 static t_printf		filling_p(char *format, int i)
 {

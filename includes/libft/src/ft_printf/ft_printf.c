@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../headers/ft_printf.h"
+#include "ft_printf.h"
 
 static size_t	parsing_format(va_list *arg, char *format)
 {

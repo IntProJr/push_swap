@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 15:54:02 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/03 17:14:27 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ typedef struct		s_op
 	char 			line[30];
 	char 			spaces[200];
 }					t_op;
+
+int					check_args(char *argv[], int argc);
 
 
 

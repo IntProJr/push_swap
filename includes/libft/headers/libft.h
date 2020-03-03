@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 20:01:23 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/02/28 15:54:10 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/03 18:06:15 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t			ft_wordcount(const char *s, char c);
 void			ft_clear_mass(char ***mas);
 int				ft_isspace(char c);
+void			ft_chr_and_fill(char **str, char c, int count);
 
 #endif
