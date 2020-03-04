@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 18:35:15 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/04 16:19:03 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define PUSH_SWAP_H
 
 #include "libft/headers/libft.h"
+
+typedef struct		s_stack
+{
+	int 			value;
+	int 			pos;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+}					t_stack;
 
 typedef struct		s_op
 {
@@ -32,10 +40,15 @@ typedef struct		s_op
 	char 			spaces[200];
 }					t_op;
 
+
+
 int					check_args(char *argv[], int argc);
 int					parse_stack(char **a, int **stack_a, char programm);
-
-
+int					*get_min_max_middle(t_op *val, int *stack_a, int size);
+t_stack				*stack_as_list(int *stack_a, int *order, int size);
+void				free_stack_list(t_stack *stack);
+void				sort_little_count(t_stack **a, t_stack **b, t_op *val,
+					int size);
 
 
 

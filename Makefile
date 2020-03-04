@@ -16,7 +16,8 @@ NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC1 	= main.c get_min_and_middle.c parse_stack.c
+SRC1 	= main.c get_min_and_middle.c parse_stack.c push_swap.c
+            create_lst_stack.c bonus.c three_or_five.c
 
 SRC2 	= *.c
 
