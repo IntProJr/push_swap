@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/03 18:40:38 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/04 13:33:06 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC1 	= *.c
+SRC1 	= main.c get_min_and_middle.c parse_stack.c
 
 SRC2 	= *.c
 

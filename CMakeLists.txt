@@ -112,5 +112,8 @@ add_executable(push_swap
     includes/libft/src/libft/ft_u_longlong_len.c
     includes/libft/src/libft/ft_wordcount.c
 	includes/libft/src/libft/ft_chr_and_fill.c
+	includes/libft/src/libft/ft_digstr_cpy.c
+	includes/libft/src/libft/take_power.c
     includes/push_swap.h
-    main.c get_min_and_middle.c)
+    main.c get_min_and_middle.c
+	parse_stack.c)

@@ -6,11 +6,30 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:01:00 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 19:16:05 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:19:39 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+static int 	dupl_zero(int *stack_a, int size)
+{
+	int 	i;
+	int		count_z;
+
+	i = 0;
+	count_z = 0;
+	while (i < size)
+	{
+		if (stack_a[i++] == 0)
+		{
+			count_z++;
+			if (count_z > 1)
+				return (1);
+		}
+	}
+	return (0);
+}
 
 /*
 ** ft_digstr_cpy: возвращает заполненный stack_a /используем malloc
@@ -24,7 +43,15 @@ static int	check_order(int *stack, int **stack_a,
 	i = 0;
 	if (dupl_zero(stack, size) == 1)
 		return (-1);
-
+	while (i < (size - 1))
+	{
+		if (stack[i] > stack[i + 1])
+			return ((!(*stack_a = ft_digstr_cpy(stack, size))) ? (-1) : (size));
+		i++;
+	}
+	if (programm == 'c')
+		return ((!(*stack_a = ft_digstr_cpy(stack, size))) ? (-1) : (size));
+	return (0);
 }
 
 
@@ -53,7 +80,7 @@ static int 	define_num(char ***a, int minus)
 	{
 		result += (*star - 48) * rank_count;
 		star++;
-		rank_count / 10;
+		rank_count /= 10;
 	}
 	result *= (minus > 0) ? -1 : 1;
 	if (result >= 2147483648 || result <= -2147483649)
@@ -99,7 +126,7 @@ int 		parse_stack(char **a, int **stack_a, char programm)
 	size = 0;
 	a++;
 	ft_bzero(stack, sizeof(int) * 1500);
-	while (*a != NULL);
+	while (*a != NULL)
 	{
 		while (**a != '\0')
 		{

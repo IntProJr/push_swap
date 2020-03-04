@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 20:01:23 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 18:09:06 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:01:17 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,7 @@ size_t				ft_wordcount(const char *s, char c);
 void				ft_clear_mass(char ***mas);
 int					ft_isspace(char c);
 void				ft_chr_and_fill(char **str, char c, int count);
+int					*ft_digstr_cpy(int *stack, int size);
+int					take_power(int num);
 
 #endif
