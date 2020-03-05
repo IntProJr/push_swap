@@ -6,11 +6,25 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:40:36 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/04 19:43:20 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:45:08 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+/*
+** ra | rb: первый элемент стека становится последним.
+** pa | pb: первый элемент в верхней части a (b) помещают в верх стека b (a)
+** sa | sb: поменяйте местами первые 2 элемента в верхней части стека a (b)
+** rra| rrb: сдвинуть вниз все элементы. Последний элемент становится первым.
+** ss | rr | rrr: применить одновременно к обоим стекам
+*/
+
+void	choose_op(t_stack **a, t_stack **b, char *op)
+{
+	if (ft_strcmp("sa", op) == 0)
+		option_s(a);
+}
 
 /*
 ** size_b/size_a: изменяем в зависимости от выбора опции
@@ -19,5 +33,21 @@
 
 void 	take_stack_op(t_stack **a, t_stack **b, t_op *val, char *opt)
 {
+	if (opt[0] == 'p')
+	{
+		if (opt[1] == 'a')
+		{
+			val->size_b--;
+			val->size_a++;
+		}
+		else if (opt[1] == 'b')
+		{
+			val->size_b++;
+			val->size_a--;
+		}
+	}
+	choose_op(a, b, opt);
+
+	// v_flag //
 
 }
