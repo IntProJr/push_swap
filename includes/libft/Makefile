@@ -109,7 +109,6 @@ LIBFT_C = ft_abs.c \
           ft_u_longlong_len.c \
           ft_wordcount.c \
           ft_digstr_cpy.c \
-          take_power.c \
           ft_swap.c \
 
 

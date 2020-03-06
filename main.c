@@ -64,7 +64,6 @@ int			main(int argc, char *argv[])
 		argv++;
 	}
 	val.size = parse_stack(argv, &stack_a, 'p');
-	val.pow = take_power(val.size);
 	(val.size > 0) ? push_swap(stack_a, val.size, &val) : ft_printf("Error\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/04 16:19:03 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/06 18:20:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ int					parse_stack(char **a, int **stack_a, char programm);
 int					*get_min_max_middle(t_op *val, int *stack_a, int size);
 t_stack				*stack_as_list(int *stack_a, int *order, int size);
 void				free_stack_list(t_stack *stack);
-void				sort_little_count(t_stack **a, t_stack **b, t_op *val,
-					int size);
+int					push_swap(int *stack_a, int size, t_op *val);
 
 
 

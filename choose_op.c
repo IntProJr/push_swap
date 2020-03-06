@@ -47,7 +47,9 @@ void 	take_stack_op(t_stack **a, t_stack **b, t_op *val, char *opt)
 		}
 	}
 	choose_op(a, b, opt);
-
-	// v_flag //
+	if (val->v_flag == 1)
+		ft_v(*a, *b, val, opt);
+	else
+		ft_printf("%s\n", opt);
 
 }
