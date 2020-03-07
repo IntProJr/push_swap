@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:40:36 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/05 15:45:08 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:11:21 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,27 @@ void	choose_op(t_stack **a, t_stack **b, char *op)
 {
 	if (ft_strcmp("sa", op) == 0)
 		option_s(a);
+	else if (ft_strcmp("sb", op) == 0)
+		option_s(b);
+	else if (ft_strcmp("ss", op) == 0)
+		run_together(a, b, option_s);
+	else if (ft_strcmp("pa", op) == 0)
+		option_p(b, a);
+	else if (ft_strcmp("ra", op) == 0)
+		option_r(a);
+	else if (ft_strcmp("rb", op) == 0)
+		option_r(b);
+	else if (ft_strcmp("rr", op) == 0)
+		run_together(a, b, option_r);
+	else if (ft_strcmp("rra", op) == 0)
+		option_rr(a);
+	else if (ft_strcmp("rrb", op) == 0)
+		option_rr(b);
+	else if (ft_strcmp("rrr", op) == 0)
+		run_together(a, b, option_rr);
+	else
+		exit(ft_printf("Error with choose operations"));
+
 }
 
 /*
@@ -51,5 +72,4 @@ void 	take_stack_op(t_stack **a, t_stack **b, t_op *val, char *opt)
 		ft_v(*a, *b, val, opt);
 	else
 		ft_printf("%s\n", opt);
-
 }

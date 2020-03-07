@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/04 13:54:03 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/07 11:42:04 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int			main(int argc, char *argv[])
 		argv++;
 	}
 	val.size = parse_stack(argv, &stack_a, 'p');
+	val.pow = take_power(val.size);
 	(val.size > 0) ? push_swap(stack_a, val.size, &val) : ft_printf("Error\n");
 	return (0);
 }

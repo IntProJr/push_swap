@@ -13,6 +13,23 @@
 #include "./includes/push_swap.h"
 
 /*
+** Считает количество элементов структуры
+*/
+
+size_t			ft_lstcount(t_stack *lst)
+{
+	size_t		i;
+
+	i = 0;
+	while (lst != NUll)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}
+
+/*
 ** Удаляем структуру
 */
 

@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 20:01:23 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/04 13:01:17 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/07 11:42:04 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void				ft_clear_mass(char ***mas);
 int					ft_isspace(char c);
 void				ft_chr_and_fill(char **str, char c, int count);
 int					*ft_digstr_cpy(int *stack, int size);
+int					take_power(int num);
 void				ft_swap(int *stack, int left, int right);
 
 #endif

@@ -12,6 +12,39 @@
 
 #include "./includes/push_swap.h"
 
+
+/*
+** переносим значения, кроме min и max в стек б, сортируя его по middle
+** pb: первый элемент сверху стека а помещают в верх стека б.
+** rb: сдвинуть все элементы стека b на 1. Первый элемент становится последним.
+** ra: первый элемент стека a становится последним.
+** sa: поменять местами первые 2 элемента в верхней части стека a.
+*/
+
+stacic void		creat_stack_b(t_stack **a, t_stack **b,
+				t_op *values, int size)
+{
+	int		digit;
+	int		count;
+
+	count = 0;
+	while (count < size)
+	{
+		digit = (*a)->value;
+		if (digit != values->max && digit != values->min)
+		{
+			take_stack_op(a, b, values, "pb");
+			count++;
+			if (digit >= values->middle)
+				take_stack_op(a, b, values, "rb");
+		}
+		else
+			take_stack_op(a, b, values, "ra");
+	}
+	if ((*a)->value != values->max)
+		take_stack_op(a, b, values, "sa");
+}
+
 /*
 ** get_min_max_middle: заполняет структуру min, max и middle значениями
 ** val->order: отсортирован от мин к макс значению методом быстрой сортировки
@@ -34,15 +67,14 @@ int 	push_swap(int *stack_a, int size, t_op *val)
 		free_stack_list(a);
 		return (-1);
 	}
-//	if (val->v_flag == 2)
-//		ft_vz(a, b, val, "");
+
 	if (size == 5 || size == 3)
 		sort_little_count(&a, &b, val, size);
 	else
 	{
-		creat_st
+		creat_stack_b(&a, &b, val,(size - 2));
+		sorting_inserts(&a, &b, val, size);
 	}
-
-
-
+	free_stack_list(a);
+	return (1);
 }
