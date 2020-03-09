@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 14:42:52 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 18:36:05 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,8 @@ t_stack 	*create_second_stack(t_stack *a);
 void	quick_sort(t_num *arr, int low, int high);
 void		change_index(t_stack *a, t_stack *b);
 void		set_to_zero_stack(t_stack *b);
+void 	push_b(t_stack *a, t_stack *b);
+void 	rotate_stk(t_stack *stk);
+
 
 # endif

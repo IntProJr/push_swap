@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_sort.c                                       :+:      :+:    :+:   */
+/*   count_moves.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/09 18:29:36 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:36:05 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/03/09 18:48:03 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/09 18:48:03 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void		kick_from_b(t_stack *a, t_stack *b)
+t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 {
-	while (b->used_size > 0)
-	{
-		count_moves(a, b);
-		do_moves(a, b);
-	}
+	int half;
+	int j;
+
+	set_to_zero_moves(&val);
+	j = a->used_size - 1;
+	half = b->used_size / 2;
+	if (i < half)
+		val.rb = b->used_size - 1 - i;
+	val = count_stack_a_moves(a, val);
+	val = unit_moves(val);
+	return (val);
 }
 
-void		sort_small(t_stack *a, t_stack *b)
+void count_moves(t_stack *a, t_stack *b)
 {
 	int 	i;
 
-	i = a->used_size - 1;
-	while (a->used_size > 3)
+	i = b->used->size - 1;
+	while (i >= 0)
 	{
-		if (a->arr[i].index != a->min && a->arr[i].index != a->max)
-		{
-			push_b(a, b);
-			i = a->used_size - 1;
-		}
-		else
-			rotate_a(a);
-	}
-	sort_three(a);
-	if (b->used > 0)
-	{
-		kick_from_b(a, b);
-		kick_val_to_top(a, a->max);
+		b->arr[i] = count_moves_for_num(a, b, b->arr[i], i);
+		i--;
 	}
 }
