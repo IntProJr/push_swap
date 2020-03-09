@@ -12,6 +12,22 @@
 
 #include "./includes/push_swap.h"
 
+int 	find_min_actions(t_stack *b)
+{
+	int	j;
+	int min;
+
+	j = b->used_size - 1;
+	min = j;
+	while (j >= 0)
+	{
+		if (b->arr[min].total_moves > b->arr[j].total_moves)
+			min = j;
+		j--;
+	}
+	return (min);
+}
+
 void	push_swap(int argc, char **argv)
 {
 	t_stack *a;

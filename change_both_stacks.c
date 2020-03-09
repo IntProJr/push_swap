@@ -32,4 +32,9 @@ void		change_index(t_stack *a, t_stack *b)
 	}
 }
 
-
+void		rotate_rr(t_stack *a, t_stack *b)
+{
+	rotate_stk(a);
+	rotate_stk(b);
+	ft_printf("rr\n");
+}
