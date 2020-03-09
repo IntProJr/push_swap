@@ -16,7 +16,25 @@ NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC1 	= main.c get_min_and_middle.c parse_stack.c push_swap.c create_lst_stack.c bonus.c three_or_five.c general_sort.c bonus.c
+SRC1 	= 		change_a_stack.c \
+          		change_b_stack.c \
+          		change_both_stacks.c \
+          		change_stack_fun.c \
+          		copy_argv_to_stack.c \
+          		count_moves.c \
+          		create_stack.c \
+          		delete_stack.c \
+          		do_moves.c \
+          		error.c \
+          		find_min_max.c \
+          		is_sort_checkers.c \
+          		main_pw.c \
+          		push_swap.c \
+          		quick_sort.c \
+          		set_to_zero_stack.c \
+          		small_sort.c \
+          		validation.c \
+          		kick_values.c \
 
 SRC2 	= *.c
 

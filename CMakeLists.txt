@@ -132,4 +132,5 @@ add_executable(push_swap
 		quick_sort.c
 		set_to_zero_stack.c
 		small_sort.c
-		validation.c)
+		validation.c
+		kick_values.c)

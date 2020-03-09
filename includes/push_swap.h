@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 21:52:19 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 22:13:11 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void	rev_rotate_r(t_stack *a, t_stack *b);
 void	push_a(t_stack *a, t_stack *b);
 void	swap_a(t_stack *a);
 void	do_moves(t_stack *a, t_stack *b);
-
+void 	kick_val_to_top(t_stack *a, int val);
+void		del_arrays(char **arr, t_stack *a);
+void	sort_three(t_stack *a);
 
 # endif
