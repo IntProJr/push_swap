@@ -6,18 +6,18 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:51:10 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:42:55 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 	validate_val(long val, char *line)
+int			validate_val(long val, char *line)
 {
-	if ((val = ft_atoi((line)) > 2147483647 || val <= -2147483648 ||
-			(val > 0 && line[0] == '-') ||
-			(val <= 0 && line[0] != '-' && line[0] != '0'))
-			return (-1);
+	if ((val = ft_atoi(line)) > 2147483647 || val <= -2147483648 ||
+		(val > 0 && line[0] == '-') ||
+		(val <= 0 && line[0] != '-' && line[0] != '0'))
+		return (-1);
 	return (0);
 }
 
@@ -41,7 +41,7 @@ t_num 	*copy_argv_to_stack(char **arr, t_stack *stack)
 	i = 0;
 	len = get_arr_len(arr);
 	stack->size = len;
-	stack->arr = (t_num)malloc(sizeof(t_num) * stack->size);
+	stack->arr = (t_num *)malloc(sizeof(t_num) * stack->size);
 	while (--len >= 0)
 	{
 		init_num(&num);

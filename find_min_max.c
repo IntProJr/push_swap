@@ -12,39 +12,40 @@
 
 #include "./includes/push_swap.h"
 
-int			find_max(t_stack *stk)
+int		find_min(t_stack *st)
 {
-	int 	i;
-	int 	max;
+	int		i;
+	int		min;
 
-	i = stk->used_size - 1;
-	max = stk->arr[i].index;
-	while(i >= 0)
+	i = st->used_size - 1;
+	min = st->arr[i].index;
+	while (i >= 0)
 	{
-		if (max < stk->arr[i].index)
-			max = stk->arr[i].index;
+		if (min > st->arr[i].index)
+			min = st->arr[i].index;
+		i--;
+	}
+	return (min);
+}
+
+int		find_max(t_stack *st)
+{
+	int		i;
+	int		max;
+
+	i = st->used_size - 1;
+	max = st->arr[i].index;
+	while (i >= 0)
+	{
+		if (max < st->arr[i].index)
+			max = st->arr[i].index;
 		i--;
 	}
 	return (max);
 }
 
-int 		find_min(t_stack *stk)
+void	get_min_max(t_stack *stck)
 {
-	int 	i;
-	int 	min;
-
-	i = stk->used_size - 1;
-	min = st->arr[i].index;
-	while (i >= 0)
-	{
-		if (min > st->arr[i].index)
-			min = stk->arr[i].index;
-		i--;
-	}
-	return (min);
-}
-void		get_min_max(t_stack *stk)
-{
-	stk->min = find_min(stk);
-	stk->max = find_max(stk);
+	stck->min = find_min(stck);
+	stck->max = find_max(stck);
 }

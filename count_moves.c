@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:48:03 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 19:14:36 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:44:42 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_num	count_stack_a_moves(t_stack *a, t_num val)
 	}
 	else if (j < half)
 	{
-		if (j == 0 || j = -1)
+		if (j == 0 || j == -1)
 			val.rra = 1;
 		else
 			val.rra = j + 1;
@@ -72,17 +72,17 @@ t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 	if (i < half)
 		val.rrb = i + 1;
 	else if (i >= half)
-		var.rb = b->used_size - 1 - i;
+		val.rb = b->used_size - 1 - i;
 	val = count_stack_a_moves(a, val);
 	//val = unit_moves(val);
 	return (val);
 }
 
-void count_moves(t_stack *a, t_stack *b)
+void	count_moves(t_stack *a, t_stack *b)
 {
-	int 	i;
+	int	i;
 
-	i = b->used->size - 1;
+	i = b->used_size - 1;
 	while (i >= 0)
 	{
 		b->arr[i] = count_moves_for_num(a, b, b->arr[i], i);

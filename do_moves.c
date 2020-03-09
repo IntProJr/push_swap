@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 19:38:13 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 20:36:44 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:36:04 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ int 	do_m_b(t_stack *a, t_stack *b, int c, void (*f)(t_stack *, t_stack *))
 	return (0);
 }
 
-void 	do_moves(t_stack *a, t_stack *b)
+void	do_moves(t_stack *a, t_stack *b)
 {
-	int 	min_moves;
+	int	min_moves;
 
 	min_moves = find_min_actions(b);
 	if (find_function(b->arr[min_moves]) == 1)
@@ -60,13 +60,15 @@ void 	do_moves(t_stack *a, t_stack *b)
 	if (find_function(b->arr[min_moves]) == 2)
 		b->arr[min_moves].rb = do_move(b, b->arr[min_moves].rb, rotate_b);
 	if (find_function(b->arr[min_moves]) == 3)
-		b->arr[min_moves].rra = do_move(b, b->arr[min_moves].rra, rev_rotate_a);
+		b->arr[min_moves].rra = do_move(a, b->arr[min_moves].rra, rev_rotate_a);
 	if (find_function(b->arr[min_moves]) == 4)
 		b->arr[min_moves].rrb = do_move(b, b->arr[min_moves].rrb, rev_rotate_b);
 	if (find_function(b->arr[min_moves]) == 5)
 		b->arr[min_moves].rr = do_m_b(a, b, b->arr[min_moves].rr, rotate_rr);
 	if (find_function(b->arr[min_moves]) == 6)
-		b->arr[min_moves].rrr = do_m_b(a, b, b->arr[min_moves].rrr, rev_rotate_r);
+		b->arr[min_moves].rrr = \
+		do_m_b(a, b, b->arr[min_moves].rrr, rev_rotate_r);
 	if (find_function(b->arr[min_moves]) == 7)
 		push_a(a, b);
 }
+

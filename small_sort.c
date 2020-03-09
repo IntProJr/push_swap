@@ -6,28 +6,32 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:29:36 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:36:05 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:52:52 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void		sort_three(t_stack *a)
+void	sort_three(t_stack *a)
 {
-	int 	top;
-	int 	mid;
-	int 	bottom;
+	int	top;
+	int	mid;
+	int	bottom;
 
 	top = 2;
 	mid = 1;
 	bottom = 0;
 	if ((a->max == a->arr[top].index && a->min == a->arr[mid].index) ||
-			(a->min == a->arr[bottom].index && a->max == a->arr[mid].index) ||
-			(a->min == a->arr[top].index && a->max == a->arr[bottom].index))
+		(a->min == a->arr[bottom].index && a->max == a->arr[mid].index) ||
+		(a->min == a->arr[top].index && a->max == a->arr[bottom].index))
 		swap_a(a);
+	if (a->max == a->arr[mid].index && a->min == a->arr[top].index)
+		rotate_a(a);
+	if (a->min == a->arr[mid].index && a->max == a->arr[bottom].index)
+		rev_rotate_a(a);
 }
 
-void		kick_from_b(t_stack *a, t_stack *b)
+void	kick_from_b(t_stack *a, t_stack *b)
 {
 	while (b->used_size > 0)
 	{
@@ -36,9 +40,9 @@ void		kick_from_b(t_stack *a, t_stack *b)
 	}
 }
 
-void		sort_small(t_stack *a, t_stack *b)
+void	sort_small(t_stack *a, t_stack *b)
 {
-	int 	i;
+	int	i;
 
 	i = a->used_size - 1;
 	while (a->used_size > 3)
@@ -52,7 +56,7 @@ void		sort_small(t_stack *a, t_stack *b)
 			rotate_a(a);
 	}
 	sort_three(a);
-	if (b->used > 0)
+	if (b->used_size > 0)
 	{
 		kick_from_b(a, b);
 		kick_val_to_top(a, a->max);

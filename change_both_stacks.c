@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:19:50 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:19:50 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 20:16:37 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,25 @@ void		change_index(t_stack *a, t_stack *b)
 	}
 }
 
-void		rotate_rr(t_stack *a, t_stack *b)
+void	swap_ss(t_stack *a, t_stack *b)
+{
+	if (a->used_size < 2 || b->used_size < 2)
+		return ;
+	swap_top(a);
+	swap_top(b);
+	ft_printf("ss\n");
+}
+
+void	rotate_rr(t_stack *a, t_stack *b)
 {
 	rotate_stk(a);
 	rotate_stk(b);
 	ft_printf("rr\n");
+}
+
+void	rev_rotate_r(t_stack *a, t_stack *b)
+{
+	rev_rotate_stk(a);
+	rev_rotate_stk(b);
+	ft_printf("rrr\n");
 }

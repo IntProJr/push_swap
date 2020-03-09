@@ -12,6 +12,18 @@
 
 #include "./includes/push_swap.h"
 
+void		set_to_zero_moves(t_num *n)
+{
+	n->ra = 0;
+	n->rb = 0;
+	n->rr = 0;
+	n->rra = 0;
+	n->rrb = 0;
+	n->rrr = 0;
+	n->swap = 0;
+	n->total_moves = 0;
+}
+
 void		init_num(t_num *n)
 {
 	n->val = -1;
@@ -34,13 +46,13 @@ void		del_arrays(char **arr, t_stack *a)
 	ft_printf("Error\n");
 }
 
-t_stack		*create_argv_stack(int argc, char *argv[])
+t_stack		*create_argv_stack(int argc, char **argv)
 {
-	t_stack		*a;
-	char		**arr;
+	t_stack	*a;
+	char	**arr;
 
 	arr = NULL;
-	a = (t_stack *)malloc(sizeof(t_stack));
+	a = (t_stack*)malloc(sizeof(t_stack));
 	if (argc == 2)
 	{
 		arr = ft_strsplit(argv[1], ' ');
@@ -48,7 +60,7 @@ t_stack		*create_argv_stack(int argc, char *argv[])
 	}
 	else if (argc > 2)
 		a->arr = copy_argv_to_stack(argv, a);
-	if(a->arr == NULL)
+	if (a->arr == NULL)
 	{
 		del_arrays(arr, a);
 		return (NULL);
@@ -61,16 +73,15 @@ t_stack		*create_argv_stack(int argc, char *argv[])
 	return (a);
 }
 
-t_stack 	*create_second_stack(t_stack *a)
+t_stack		*create_second_stack(t_stack *a)
 {
 	t_stack		*b;
-	int 		i;
+	int			i;
 	t_num		num;
 
 	i = a->size - 1;
-	b = (t_stack *)malloc(sizeof(t_stack));
-	b->arr = (t_stack *)malloc(sizeof(t_stack));
-	b->arr = (t_num *)malloc(sizeof(t_num) * a->size);
+	b = (t_stack*)malloc(sizeof(t_stack));
+	b->arr = (t_num*)malloc(sizeof(t_num) * a->size);
 	b->name = 'b';
 	b->used_size = 0;
 	b->size = a->size;

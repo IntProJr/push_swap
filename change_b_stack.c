@@ -12,7 +12,26 @@
 
 #include "./includes/push_swap.h"
 
-void 	push_b(t_stack *a, t_stack *b)
+void	swap_b(t_stack *b)
+{
+	if (b->used_size < 2)
+		return ;
+	swap_top(b);
+	ft_printf("sb\n");
+}
+
+void	push_stck_b(t_stack *a, t_stack *b)
+{
+	if (a->used_size == 0)
+		return ;
+	b->used_size++;
+	b->arr[b->used_size - 1].index = a->arr[a->used_size - 1].index;
+	b->arr[b->used_size - 1].val = a->arr[a->used_size - 1].val;
+	a->arr[a->used_size - 1].index = -1;
+	a->used_size--;
+}
+
+void	push_b(t_stack *a, t_stack *b)
 {
 	if (a->used_size == 0)
 		return ;

@@ -28,17 +28,17 @@ int 	is_it_sort(t_stack *a)
 	return (0);
 }
 
-int 	is_it_dup(t_stack *a)
+int		is_it_dup(t_stack *a)
 {
-	int		i;
-	int 	j;
-	int 	duplicate;
+	int	i;
+	int	j;
+	int	f;
 
 	if (a == NULL)
 		return (-1);
 	i = a->used_size - 1;
 	j = 0;
-	duplicate = 0;
+	f = 0;
 	while (i >= 0)
 	{
 		j = 0;
@@ -46,10 +46,10 @@ int 	is_it_dup(t_stack *a)
 		while (j < a->used_size)
 		{
 			if (a->arr[i].val == a->arr[j].val)
-				duplicate++;
+				f++;
 			j++;
 		}
-		if (duplicate > 1)
+		if (f > 1)
 			return (1);
 		i--;
 	}
