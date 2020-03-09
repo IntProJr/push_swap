@@ -55,6 +55,35 @@ t_stack		*create_argv_stack(int argc, char *argv[])
 	}
 	a->name = 'a';
 	get_min_max(a);
+	if (arr)
+		del_matrix(arr);
+	free(arr);
+	return (a);
+}
 
+t_stack 	*create_second_stack(t_stack *a)
+{
+	t_stack		*b;
+	int 		i;
+	t_num		num;
 
+	i = a->size - 1;
+	b = (t_stack *)malloc(sizeof(t_stack));
+	b->arr = (t_stack *)malloc(sizeof(t_stack));
+	b->arr = (t_num *)malloc(sizeof(t_num) * a->size);
+	b->name = 'b';
+	b->used_size = 0;
+	b->size = a->size;
+	b->min = -1;
+	b->max = -1;
+	while (i >= 0)
+	{
+		init_num(&num);
+		b->arr[i] = num;
+		b->arr[i].val = a->arr[i].val;
+		b->arr[i].index = a->arr[i].index;
+		i--;
+		b->used_size++;
+	}
+	return (b);
 }
