@@ -12,6 +12,21 @@
 
 #include "./includes/push_swap.h"
 
+void		sort_three(t_stack *a)
+{
+	int 	top;
+	int 	mid;
+	int 	bottom;
+
+	top = 2;
+	mid = 1;
+	bottom = 0;
+	if ((a->max == a->arr[top].index && a->min == a->arr[mid].index) ||
+			(a->min == a->arr[bottom].index && a->max == a->arr[mid].index) ||
+			(a->min == a->arr[top].index && a->max == a->arr[bottom].index))
+		swap_a(a);
+}
+
 void		kick_from_b(t_stack *a, t_stack *b)
 {
 	while (b->used_size > 0)

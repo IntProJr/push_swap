@@ -6,11 +6,28 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:40:18 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 20:04:15 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 20:07:23 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+void	swap_nums(t_num *a, t_num *b)
+{
+	t_num	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void	swap_top(t_stack *stk)
+{
+	if (stk->used_size < 2)
+		return ;
+	swap_nums(&(stk->arr[stk->used_size - 1]), \
+		&(stk->arr[stk->used_size - 2]));
+}
 
 void 	rotate_stk(t_stack *stk)
 {

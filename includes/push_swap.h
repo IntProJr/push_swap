@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 19:58:27 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 20:07:23 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void 	rotate_stk(t_stack *stk);
 void count_moves(t_stack *a, t_stack *b);
 int 	find_min_actions(t_stack *b);
 void	rev_rotate_stk(t_stack *stk);
+void		sort_small(t_stack *a, t_stack *b);
 
 
 # endif

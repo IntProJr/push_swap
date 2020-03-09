@@ -6,11 +6,19 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:37:08 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 19:58:27 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 21:19:47 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+void	swap_a(t_stack *a)
+{
+	if (a->used_size < 2)
+		return ;
+	swap_top(a);
+	ft_printf("sa\n");
+}
 
 void	push_a(t_stack *a, t_stack *b)
 {
