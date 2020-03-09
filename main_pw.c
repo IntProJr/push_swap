@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 14:02:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/03/03 15:00:58 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/09 14:21:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void		push_swap(int argc, char *argv[])
+int			main(int argc, char *argv[])
 {
-	t_stack *a;
-	t_stack *b;
-	int hold_min;
-	int hold_max;
-
-	if ((a = create_argv_stack(argc, argv)) == NULL)
-		return ;
-	if (check_errors(a) == -1 || is_it_sort(a) == 0)
+	if (argc == 1 || check_args(argc, argv) == 0)
+		return (ft_printf("Error\n"));
+	if (argc == 2)
 	{
-		if (a)
-			del_stack(a);
-		return ;
+		if ((validate_arg(argv[1])) == -1)
+		{
+			ft_printf("Error\n");
+			exit(0);
+		}
 	}
-	b = create_second_stack(a);
+	else if (argc > 2)
+	{
+		if ((validate_args(++argv)) == -1)
+		{
+			ft_printf("Error\n");
+			exit(0);
+		}
+	}
+	if (argc >= 2)
+		push_swap(argc, argv);
+	return (0);
 }

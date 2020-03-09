@@ -102,5 +102,6 @@ void				ft_chr_and_fill(char **str, char c, int count);
 int					*ft_digstr_cpy(int *stack, int size);
 int					take_power(int num);
 void				ft_swap(int *stack, int left, int right);
+void				del_matrix(char **matrix);
 
 #endif

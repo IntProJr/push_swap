@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_del_matrix.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 14:02:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/03/09 16:47:05 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/09 16:47:05 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/push_swap.h"
+#include "../headers/libft.h"
 
-void		push_swap(int argc, char *argv[])
+void		del_matrix(char **matrix)
 {
-	t_stack *a;
-	t_stack *b;
-	int hold_min;
-	int hold_max;
+	int 	i;
 
-	if ((a = create_argv_stack(argc, argv)) == NULL)
-		return ;
-	if (check_errors(a) == -1 || is_it_sort(a) == 0)
+	i = 0;
+	while (matrix[i])
 	{
-		if (a)
-			del_stack(a);
-		return ;
+		if (matrix[i])
+			free(matrix[i]);
+		matrix[i] = NULL;
+		i++;
 	}
-	b = create_second_stack(a);
 }

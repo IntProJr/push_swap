@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/07 11:42:04 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/09 14:26:46 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-SRC1 	= main.c get_min_and_middle.c parse_stack.c push_swap.c
-            create_lst_stack.c bonus.c three_or_five.c
+SRC1 	= main.c get_min_and_middle.c parse_stack.c push_swap.c create_lst_stack.c bonus.c three_or_five.c general_sort.c bonus.c
 
 SRC2 	= *.c
 

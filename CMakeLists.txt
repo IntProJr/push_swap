@@ -113,11 +113,15 @@ add_executable(push_swap
     includes/libft/src/libft/ft_wordcount.c
 	includes/libft/src/libft/ft_chr_and_fill.c
 	includes/libft/src/libft/ft_digstr_cpy.c
-		includes/libft/src/libft/ft_swap.c
+	includes/libft/src/libft/ft_swap.c
     includes/push_swap.h
-    main.c
+		main_pw.c
 	get_min_and_middle.c
 	parse_stack.c
 	push_swap.c
-	create_lst_stack.c
-	three_or_five.c)
+		create_stack.c
+	three_or_five.c
+	operators.c
+	general_sort.c
+	choose_op.c
+	bonus.c)

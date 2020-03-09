@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 15:48:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/07 15:11:21 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,11 @@ void	option_r(t_stack **stack)
 	*stack = new_first;
 }
 
-void	run_together(t_stack **stack, t_stack **stack_b,
-		void (f)(t_stack **))
+void			run_together(t_stack **stack_a,
+							 t_stack **stack_b, void (f)(t_stack **))
 {
 	f(stack_a);
 	f(stack_b);
-
 }
 
 /*

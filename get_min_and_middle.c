@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 17:05:45 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/04 16:09:14 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int			*get_min_max_middle(t_op *val, int *stack_a, int size)
 		return (NULL);
 	while (i < size)
 	{
-		ptr[i] = stack_a;
+		ptr[i] = *stack_a;
 		i++;
 	}
 	quick_sort(stack_a, 0, size - 1);
@@ -102,7 +102,7 @@ int			*get_min_max_middle(t_op *val, int *stack_a, int size)
 ** параметров или non-printable characters
 */
 
-int 		check_args(char *argv[], int argc)
+int 		check_args(int argc, char *argv[])
 {
 	int 		i;
 	int 		j;

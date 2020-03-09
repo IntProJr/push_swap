@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   delete_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 14:02:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Created: 2020/03/09 16:19:58 by lrosalee          #+#    #+#             */
+/*   Updated: 2020/03/09 16:19:58 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void		push_swap(int argc, char *argv[])
+void		del_stack(t_stack *stack)
 {
-	t_stack *a;
-	t_stack *b;
-	int hold_min;
-	int hold_max;
-
-	if ((a = create_argv_stack(argc, argv)) == NULL)
-		return ;
-	if (check_errors(a) == -1 || is_it_sort(a) == 0)
+	if (stack->arr)
 	{
-		if (a)
-			del_stack(a);
-		return ;
+		free(stack->arr);
+		stack->arr = NULL;
 	}
-	b = create_second_stack(a);
+	if (stack)
+	{
+		free(stack);
+		stack = NULL;
+	}
 }

@@ -110,6 +110,7 @@ LIBFT_C = ft_abs.c \
           ft_wordcount.c \
           ft_digstr_cpy.c \
           ft_swap.c \
+          ft_del_matrix.c \
 
 
 DIR_O = temporary
