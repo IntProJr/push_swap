@@ -14,10 +14,10 @@
 
 void		del_stack(t_stack *stack)
 {
-	if (stack->arr)
+	if (stack->array)
 	{
-		free(stack->arr);
-		stack->arr = NULL;
+		free(stack->array);
+		stack->array = NULL;
 	}
 	if (stack)
 	{

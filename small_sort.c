@@ -21,13 +21,13 @@ void	sort_three(t_stack *a)
 	top = 2;
 	mid = 1;
 	bottom = 0;
-	if ((a->max == a->arr[top].index && a->min == a->arr[mid].index) ||
-		(a->min == a->arr[bottom].index && a->max == a->arr[mid].index) ||
-		(a->min == a->arr[top].index && a->max == a->arr[bottom].index))
+	if ((a->max == a->array[top].index && a->min == a->array[mid].index) ||
+		(a->min == a->array[bottom].index && a->max == a->array[mid].index) ||
+		(a->min == a->array[top].index && a->max == a->array[bottom].index))
 		swap_a(a);
-	if (a->max == a->arr[mid].index && a->min == a->arr[top].index)
+	if (a->max == a->array[mid].index && a->min == a->array[top].index)
 		rotate_a(a);
-	if (a->min == a->arr[mid].index && a->max == a->arr[bottom].index)
+	if (a->min == a->array[mid].index && a->max == a->array[bottom].index)
 		rev_rotate_a(a);
 }
 
@@ -47,7 +47,7 @@ void	sort_small(t_stack *a, t_stack *b)
 	i = a->used_size - 1;
 	while (a->used_size > 3)
 	{
-		if (a->arr[i].index != a->min && a->arr[i].index != a->max)
+		if (a->array[i].index != a->min && a->array[i].index != a->max)
 		{
 			push_b(a, b);
 			i = a->used_size - 1;

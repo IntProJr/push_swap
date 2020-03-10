@@ -15,12 +15,12 @@
 int			main(int argc, char *argv[])
 {
 	if (argc == 1 || check_args(argc, argv) == 0)
-		return (ft_printf("Error\n"));
+		return (ft_printf("Error non printable\n"));
 	if (argc == 2)
 	{
 		if ((validate_arg(argv[1])) == -1)
 		{
-			ft_printf("Error\n");
+			ft_printf("Error validation arg\n");
 			exit(0);
 		}
 	}
@@ -28,7 +28,7 @@ int			main(int argc, char *argv[])
 	{
 		if ((validate_args(++argv)) == -1)
 		{
-			ft_printf("Error\n");
+			ft_printf("Error validation args\n");
 			exit(0);
 		}
 	}

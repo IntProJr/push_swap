@@ -20,37 +20,37 @@ void		swap(int *a,int *b)
 	*b = tmp;
 }
 
-int 		partition(t_num *arr, int low, int high)
+int 		partition(t_num *array, int low, int high)
 {
 	int	pivot;
 	int	i;
 	int j;
 
 	i = low - 1;
-	pivot = arr[high].val;
+	pivot = array[high].value;
 	j = low;
 	while (j <= high)
 	{
-		if (arr[j].val > pivot)
+		if (array[j].value > pivot)
 		{
 			i++;
-			swap(&arr[i].val, &arr[j].val);
+			swap(&array[i].value, &array[j].value);
 		}
 		j++;
 	}
-	swap(&arr[i + 1].val, &arr[high].val);
+	swap(&array[i + 1].value, &array[high].value);
 	return (i + 1);
 }
 
-void		quick_sort(t_num *arr, int low, int high)
+void		quick_sort(t_num *array, int low, int high)
 {
-	int		pi;
+	int		pivot;
 
 	if (low < high)
 	{
-		pi = partition(arr, low, high);
-		quick_sort(arr, low, pi - 1);
-		quick_sort(arr, pi + 1, high);
+		pivot = partition(array, low, high);
+		quick_sort(array, low, pivot - 1);
+		quick_sort(array, pivot + 1, high);
 	}
 
 }

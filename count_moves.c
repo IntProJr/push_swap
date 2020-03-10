@@ -23,16 +23,16 @@ int 	find_max_between_mins(t_stack *a, t_num val)
 	min.index = -1;
 	while (i < a->used_size)
 	{
-		if (a->arr[i].index < val.index)
+		if (a->array[i].index < val.index)
 		{
-			min = a->arr[i];
+			min = a->array[i];
 			if (max_min.index < min.index)
 				max_min = min;
 		}
 		i++;
 	}
 	i = 0;
-	while (a->arr[i].index != max_min.index)
+	while (a->array[i].index != max_min.index)
 		i++;
 	return (i);
 }
@@ -74,7 +74,7 @@ t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 	else if (i >= half)
 		val.rb = b->used_size - 1 - i;
 	val = count_stack_a_moves(a, val);
-	//val = unit_moves(val);
+	//value = unit_moves(value);
 	return (val);
 }
 
@@ -85,7 +85,7 @@ void	count_moves(t_stack *a, t_stack *b)
 	i = b->used_size - 1;
 	while (i >= 0)
 	{
-		b->arr[i] = count_moves_for_num(a, b, b->arr[i], i);
+		b->array[i] = count_moves_for_num(a, b, b->array[i], i);
 		i--;
 	}
 }

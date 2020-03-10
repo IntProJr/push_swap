@@ -25,9 +25,9 @@ void	push_stck_b(t_stack *a, t_stack *b)
 	if (a->used_size == 0)
 		return ;
 	b->used_size++;
-	b->arr[b->used_size - 1].index = a->arr[a->used_size - 1].index;
-	b->arr[b->used_size - 1].val = a->arr[a->used_size - 1].val;
-	a->arr[a->used_size - 1].index = -1;
+	b->array[b->used_size - 1].index = a->array[a->used_size - 1].index;
+	b->array[b->used_size - 1].value = a->array[a->used_size - 1].value;
+	a->array[a->used_size - 1].index = -1;
 	a->used_size--;
 }
 
@@ -36,9 +36,9 @@ void	push_b(t_stack *a, t_stack *b)
 	if (a->used_size == 0)
 		return ;
 	b->used_size++;
-	b->arr[b->used_size - 1].index = a->arr[a->used_size - 1].index;
-	b->arr[b->used_size - 1].val = a->arr[a->used_size - 1].val;
-	a->arr[a->used_size - 1].index = -1;
+	b->array[b->used_size - 1].index = a->array[a->used_size - 1].index;
+	b->array[b->used_size - 1].value = a->array[a->used_size - 1].value;
+	a->array[a->used_size - 1].index = -1;
 	a->used_size--;
 	ft_printf("pb\n");
 }

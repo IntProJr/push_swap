@@ -6,46 +6,46 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:58:43 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/10 18:29:11 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int		find_min(t_stack *st)
+int		find_min(t_stack *stack)
 {
 	int		i;
 	int		min;
 
-	i = st->used_size - 1;
-	min = st->arr[i].index;
+	i = stack->used_size - 1;
+	min = stack->array[i].index;
 	while (i >= 0)
 	{
-		if (min > st->arr[i].index)
-			min = st->arr[i].index;
+		if (min > stack->array[i].index)
+			min = stack->array[i].index;
 		i--;
 	}
 	return (min);
 }
 
-int		find_max(t_stack *st)
+int		find_max(t_stack *stack)
 {
 	int		i;
 	int		max;
 
-	i = st->used_size - 1;
-	max = st->arr[i].index;
+	i = stack->used_size - 1;
+	max = stack->array[i].index;
 	while (i >= 0)
 	{
-		if (max < st->arr[i].index)
-			max = st->arr[i].index;
+		if (max < stack->array[i].index)
+			max = stack->array[i].index;
 		i--;
 	}
 	return (max);
 }
 
-void	get_min_max(t_stack *stck)
+void	find_max_min(t_stack *stack)
 {
-	stck->min = find_min(stck);
-	stck->max = find_max(stck);
+	stack->min = find_min(stack);
+	stack->max = find_max(stack);
 }

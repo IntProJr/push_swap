@@ -25,8 +25,8 @@ void	swap_top(t_stack *stk)
 {
 	if (stk->used_size < 2)
 		return ;
-	swap_nums(&(stk->arr[stk->used_size - 1]), \
-		&(stk->arr[stk->used_size - 2]));
+	swap_nums(&(stk->array[stk->used_size - 1]), \
+		&(stk->array[stk->used_size - 2]));
 }
 
 void 	rotate_stk(t_stack *stk)
@@ -35,15 +35,15 @@ void 	rotate_stk(t_stack *stk)
 	int 	i;
 
 	i = stk->used_size - 1;
-	tmp = stk->arr[i];
+	tmp = stk->array[i];
 	while (i > 0)
 	{
-		stk->arr[i].index = stk->arr[i - 1].index;
-		stk->arr[i].val = stk->arr[i - 1].val;
+		stk->array[i].index = stk->array[i - 1].index;
+		stk->array[i].value = stk->array[i - 1].value;
 		i--;
 	}
-	stk->arr[i].val = tmp.val;
-	stk->arr[i].index = tmp.index;
+	stk->array[i].value = tmp.value;
+	stk->array[i].index = tmp.index;
 }
 
 void	rev_rotate_stk(t_stack *stk)
@@ -52,14 +52,14 @@ void	rev_rotate_stk(t_stack *stk)
 	int 	i;
 
 	i = 0;
-	tmp.index = stk->arr[i].index;
-	tmp.val = stk->arr[i].val;
+	tmp.index = stk->array[i].index;
+	tmp.value = stk->array[i].value;
 	while (i < stk->used_size - 1)
 	{
-		stk->arr[i].index = stk->arr[i + 1].index;
-		stk->arr[i].val = stk->arr[i + 1].val;
+		stk->array[i].index = stk->array[i + 1].index;
+		stk->array[i].value = stk->array[i + 1].value;
 		i++;
 	}
-	stk->arr[i].val = tmp.val;
-	stk->arr[i].index = tmp.index;
+	stk->array[i].value = tmp.value;
+	stk->array[i].index = tmp.index;
 }

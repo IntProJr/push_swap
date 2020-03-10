@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.14.5)
 project(push_swap C)
 
 set(CMAKE_C_STANDARD 11)
@@ -109,11 +109,13 @@ add_executable(push_swap
     includes/libft/src/libft/ft_tolower.c
     includes/libft/src/libft/ft_toupper.c
     includes/libft/src/libft/ft_u_len_base.c
+    includes/libft/src/libft/ft_u_len_base.c
     includes/libft/src/libft/ft_u_longlong_len.c
     includes/libft/src/libft/ft_wordcount.c
 	includes/libft/src/libft/ft_chr_and_fill.c
 	includes/libft/src/libft/ft_digstr_cpy.c
 	includes/libft/src/libft/ft_swap.c
+	includes/libft/src/libft/ft_del_matrix.c
     includes/push_swap.h
 		change_a_stack.c
 		change_b_stack.c
@@ -126,11 +128,11 @@ add_executable(push_swap
 		do_moves.c
 		error.c
 		find_min_max.c
-		is_sort_checkers.c
 		main_pw.c
 		push_swap.c
 		quick_sort.c
 		set_to_zero_stack.c
 		small_sort.c
 		validation.c
-		kick_values.c)
+		kick_values.c
+		sorting_check.c)

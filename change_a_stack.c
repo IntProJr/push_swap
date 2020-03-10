@@ -25,9 +25,9 @@ void	push_a(t_stack *a, t_stack *b)
 	if (b->used_size == 0)
 		return ;
 	a->used_size++;
-	a->arr[a->used_size - 1].index = b->arr[b->used_size - 1].index;
-	a->arr[a->used_size - 1].val = b->arr[b->used_size - 1].val;
-	b->arr[b->used_size - 1].index = -1;
+	a->array[a->used_size - 1].index = b->array[b->used_size - 1].index;
+	a->array[a->used_size - 1].value = b->array[b->used_size - 1].value;
+	b->array[b->used_size - 1].index = -1;
 	b->used_size--;
 	ft_printf("pa\n");
 }
@@ -36,4 +36,10 @@ void 	rotate_a(t_stack *a)
 {
 	rotate_stk(a);
 	ft_printf("ra\n");
+}
+
+void	rev_rotate_a(t_stack *a)
+{
+	rev_rotate_stk(a);
+	ft_printf("rra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 14:02:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:09:12 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/10 18:58:37 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,34 +21,44 @@ int 	find_min_actions(t_stack *b)
 	min = j;
 	while (j >= 0)
 	{
-		if (b->arr[min].total_moves > b->arr[j].total_moves)
+		if (b->array[min].total_moves > b->array[j].total_moves)
 			min = j;
 		j--;
 	}
 	return (min);
 }
 
+void	sort_stacks(t_stack *stack_a, t_stack *stack_b, int hold_min, int hold_max)
+{
+	kick_to_b_except(stack_a, stack_b, hold_min, hold_max);
+	count_moves(stack_a, stack_b);
+}
+
 void	push_swap(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
+	t_stack *stack_a;
+	t_stack *stack_b;
 	int hold_min;
 	int hold_max;
 
-	if ((a = create_argv_stack(argc, argv)) == NULL)
+	if ((stack_a = create_stack_argv(argc, argv)) == NULL)
 		return;
-	if (check_errors(a) == -1 || is_it_sort(a) == 0)
+	if (check_errors(stack_a) == -1 || sorting(stack_a) == 0)
 	{
-		if (a)
-			del_stack(a);
+		if (stack_a)
+			del_stack(stack_a);
 		return;
 	}
-	b = create_second_stack(a);
-	quick_sort(b->arr, 0, b->used_size - 1);
-	change_index(a, b);
-	hold_min = b->arr[a->used_size / 3].index;
-	hold_max = b->arr[a->used_size - a->used_size / 3].index;
-	set_to_zero_stack(b);
-	if (a->used_size >= 2 && a->used_size <= 5)
-		sort_small(a, b);
+	stack_b = create_second_stack(stack_a);
+	quick_sort(stack_b->array, 0, stack_b->used_size - 1);
+	change_index(stack_a, stack_b);
+	hold_min = stack_b->array[stack_a->used_size / 3].index;
+	hold_max = stack_b->array[stack_a->used_size - stack_a->used_size / 3].index;
+	set_to_zero_stack(stack_b);
+	if (stack_a->used_size >= 2 && stack_a->used_size <= 5)
+		sort_small(stack_a, stack_b);
+	else if (stack_a->used_size > 5)
+		sort_stacks(stack_a, stack_b, hold_min, hold_max);
+	del_stack(stack_a);
+	del_stack(stack_b);
 }

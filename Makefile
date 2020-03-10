@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/09 18:00:38 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/10 18:40:28 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRC1 	= 		change_a_stack.c \
           		do_moves.c \
           		error.c \
           		find_min_max.c \
-          		is_sort_checkers.c \
           		main_pw.c \
           		push_swap.c \
           		quick_sort.c \
@@ -35,6 +34,7 @@ SRC1 	= 		change_a_stack.c \
           		small_sort.c \
           		validation.c \
           		kick_values.c \
+          		sorting_check.c \
 
 SRC2 	= *.c
 

@@ -6,55 +6,55 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:51:10 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 21:42:55 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/10 17:58:38 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int			validate_val(long val, char *line)
+int			value_validation(long value, char *line)
 {
-	if ((val = ft_atoi(line)) > 2147483647 || val <= -2147483648 ||
-		(val > 0 && line[0] == '-') ||
-		(val <= 0 && line[0] != '-' && line[0] != '0'))
+	if ((value = ft_atoi(line)) > 2147483647 || value <= -2147483648 ||
+		(value > 0 && line[0] == '-') ||
+		(value <= 0 && line[0] != '-' && line[0] != '0'))
 		return (-1);
 	return (0);
 }
 
-int 	get_arr_len(char **arr)
+int 	get_len_array(char **array)
 {
 	int 	len;
 
 	len = 0;
-	while (arr[len])
+	while (array[len])
 		len++;
 	return (len);
 }
 
-t_num 	*copy_argv_to_stack(char **arr, t_stack *stack)
+t_num 	*copy_argv_to_stack(char **array, t_stack *stack)
 {
+	t_num 	number;
+	long 	value;
 	int 	i;
 	int 	len;
-	t_num 	num;
-	long 	val;
 
 	i = 0;
-	len = get_arr_len(arr);
+	len = get_len_array(array);
 	stack->size = len;
-	stack->arr = (t_num *)malloc(sizeof(t_num) * stack->size);
+	stack->array = (t_num *)malloc(sizeof(t_num) * stack->size);
 	while (--len >= 0)
 	{
-		init_num(&num);
-		val = ft_atoi(arr[len]);
-		if (validate_val(val, arr[len]) == -1)
+		num_initialization(&number);
+		value = ft_atoi(array[len]);
+		if (value_validation(value, array[len]) == -1)
 		{
-			free(stack->arr);
+			free(stack->array);
 			return (NULL);
 		}
-		num.val = val;
-		num.index = i + 1;
-		stack->arr[i++] = num;
+		number.value = value;
+		number.index = i + 1;
+		stack->array[i++] = number;
 	}
 	stack->used_size = i;
-	return (stack->arr);
+	return (stack->array);
 }
