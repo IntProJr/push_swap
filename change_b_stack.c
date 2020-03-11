@@ -20,7 +20,7 @@ void	swap_b(t_stack *b)
 	ft_printf("sb\n");
 }
 
-void	push_stck_b(t_stack *a, t_stack *b)
+void	push_stack_b(t_stack *a, t_stack *b)
 {
 	if (a->used_size == 0)
 		return ;

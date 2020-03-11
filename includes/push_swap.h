@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 14:17:33 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 15:03:32 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ typedef struct	s_stack
 typedef struct	s_commands
 {
 	char				*command;
+	void				(*fun_for_a)(t_stack *a);
+	void				(*fun_for_b)(t_stack *b);
+	void				(*fun_for_two)(t_stack *a, t_stack *b);
 	struct s_commands	*next;
 }				t_commands;
 
@@ -91,5 +94,13 @@ int 		find_over_value(t_stack *stack_a);
 void		checker(int argc, char *argv[]);
 t_commands	*add_command(t_commands *head, char *line, int fun);
 int		validate_commands(char *line);
+void		delete_commands_list(t_commands *head);
+void	swap_ss_stcks(t_stack *a, t_stack *b);
+void	rotate_rr_stcks(t_stack *a, t_stack *b);
+void	rev_rotate_stcks(t_stack *a, t_stack *b);
+void	push_stack_a(t_stack *a, t_stack *b);
+void	push_stack_b(t_stack *a, t_stack *b);
+
+
 
 # endif

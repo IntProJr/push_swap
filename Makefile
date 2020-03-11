@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/10 18:40:28 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/11 15:19:32 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,14 @@ SRC1 	= 		change_a_stack.c \
           		kick_values.c \
           		sorting_check.c \
           		search_values.c \
+          		sorting_check.c \
 
-SRC2 	= *.c
+SRC2 	=       main_checker.c \
+                commands_list_functions.c \
+                validate_comands.c \
+                change_stacks_no_output.c \
+
+
 
 OBJSFD 	= temporary
 
@@ -68,7 +74,7 @@ $(NAME1): $(OBJS1) $(LIBFT)
 	gcc $(OBJS1) $(LIB_BINARY) -o $@
 
 $(NAME2): $(OBJS2) $(LIBFT)
-	gcc $(OBJS2) $(LIB_BINARY) -o $@
+	gcc $(OBJS1) $(OBJS2) $(LIB_BINARY) -o $@
 
 clean:
 	/bin/rm -f $(OBJS)

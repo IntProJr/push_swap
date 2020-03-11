@@ -137,4 +137,7 @@ add_executable(push_swap
 		sorting_check.c
 		search_values.c
 		main_pw.c
-		main_checker.c)
+		main_checker.c
+		change_stacks_no_output.c
+		commands_list_functions.c
+		validate_comands.c)

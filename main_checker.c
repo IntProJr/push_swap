@@ -6,11 +6,35 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 14:12:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 14:18:51 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 14:55:14 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+t_commands		*execute_commands(t_stack *a, t_stack *b, t_commands *head)
+{
+	if (head->fun_for_a != NULL)
+		head->fun_for_a(a);
+	else if (head->fun_for_b != NULL)
+		head->fun_for_b(b);
+	else if (head->fun_for_two != NULL)
+		head->fun_for_two(a, b);
+	free(head->command);
+	head->command = NULL;
+	head->fun_for_a = NULL;
+	head->fun_for_b = NULL;
+	head->fun_for_two = NULL;
+	return (head);
+}
+
+void			check(t_stack *a, t_stack *b)
+{
+	if (sorting(a) == 0 && b->used_size == 0)
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
+}
 
 t_commands		*read_input(t_stack *a, t_stack *b)
 {
@@ -33,10 +57,15 @@ t_commands		*read_input(t_stack *a, t_stack *b)
 			free(line);
 			return (NULL);
 		}
+		head = add_command(head, line, fun);
+		head = execute_commands(a, b, head);
+		free(line);
 	}
+	check(a, b);
+	return (head);
 }
 
-void		checker(int argc, char *argv[])
+void			checker(int argc, char **argv)
 {
 	t_stack		*a;
 	t_stack		*b;
@@ -51,7 +80,7 @@ void		checker(int argc, char *argv[])
 	}
 	b = create_second_stack(a);
 	set_to_zero_stack(b);
-	if ((head = read_input(a, b) == NULL))
+	if ((head = read_input(a, b)) == NULL)
 	{
 		del_stack(a);
 		del_stack(b);
@@ -63,15 +92,13 @@ void		checker(int argc, char *argv[])
 	del_stack(b);
 }
 
-int			main(int argc, char *argv[])
+int				main(int argc, char **argv)
 {
-	if (argc == 1 || check_args(argc, argv) == 0)
-		return (ft_printf("Error non printable\n"));
 	if (argc == 2)
 	{
 		if ((validate_arg(argv[1])) == -1)
 		{
-			ft_printf("Error validation arg\n");
+			ft_printf("Error\n");
 			exit(0);
 		}
 	}
@@ -79,11 +106,10 @@ int			main(int argc, char *argv[])
 	{
 		if ((validate_args(++argv)) == -1)
 		{
-			ft_printf("Error validation args\n");
+			ft_printf("Error\n");
 			exit(0);
 		}
 	}
 	if (argc >= 2)
 		checker(argc, argv);
-	return (0);
 }
