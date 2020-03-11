@@ -6,17 +6,17 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:48:03 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 21:44:42 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:28:41 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 	find_max_between_mins(t_stack *a, t_num val)
+int		find_max_between_mins(t_stack *a, t_num val)
 {
 	t_num		max_min;
-	t_num 		min;
-	int 		i;
+	t_num		min;
+	int			i;
 
 	i = 0;
 	max_min.index = -1;
@@ -61,7 +61,7 @@ t_num	count_stack_a_moves(t_stack *a, t_num val)
 	return (val);
 }
 
-t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
+t_num	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 {
 	int half;
 	int j;
@@ -72,10 +72,7 @@ t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 	if (i < half)
 		val.rrb = i + 1;
 	else if (i >= half)
-	{
 		val.rb = b->used_size - 1 - i;
-		ft_printf ("%d", val.rb);
-	}
 	val = count_stack_a_moves(a, val);
 	val = unit_moves(val);
 	return (val);

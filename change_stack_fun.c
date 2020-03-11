@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:40:18 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 20:07:23 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:26:13 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	swap_top(t_stack *stk)
 		&(stk->array[stk->used_size - 2]));
 }
 
-void 	rotate_stk(t_stack *stk)
+void	rotate_stk(t_stack *stk)
 {
 	t_num	tmp;
-	int 	i;
+	int		i;
 
 	i = stk->used_size - 1;
 	tmp = stk->array[i];
@@ -49,7 +49,7 @@ void 	rotate_stk(t_stack *stk)
 void	rev_rotate_stk(t_stack *stk)
 {
 	t_num	tmp;
-	int 	i;
+	int		i;
 
 	i = 0;
 	tmp.index = stk->array[i].index;

@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/11 15:39:01 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/11 16:12:42 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,10 @@ NAME1	= push_swap
 NAME2	= checker
 
 CFLAGS 	= -Wall -Wextra -Werror
+
+PUSH_SWAP_MAIN = main_pw.c
+
+CHECKER_MAIN = main_checker.c
 
 SRC1 	= 		change_a_stack.c \
           		change_b_stack.c \
@@ -28,7 +32,6 @@ SRC1 	= 		change_a_stack.c \
           		do_moves.c \
           		error.c \
           		find_min_max.c \
-          		main_pw.c \
           		push_swap.c \
           		quick_sort.c \
           		set_to_zero_stack.c \
@@ -39,8 +42,7 @@ SRC1 	= 		change_a_stack.c \
           		search_values.c \
 
 
-SRC2 	=       main_checker.c \
-                commands_list_functions.c \
+SRC2 	=       commands_list_functions.c \
                 validate_comands.c \
                 change_stacks_no_output.c \
 
@@ -72,10 +74,10 @@ $(LIBFT):
 	make -C ./includes/libft
 
 $(NAME1): $(OBJS1) $(LIBFT)
-	gcc $(OBJS1) $(LIB_BINARY) -o $@
+	gcc $(PUSH_SWAP_MAIN) $(OBJS1) $(LIB_BINARY) -o $@
 
 $(NAME2): $(OBJS2) $(LIBFT)
-	gcc $(OBJS1) $(OBJS2) $(LIB_BINARY) -o $@
+	gcc $(CHECKER_MAIN) $(OBJS1) $(OBJS2) $(LIB_BINARY) -o $@
 
 clean:
 	/bin/rm -f $(OBJS)

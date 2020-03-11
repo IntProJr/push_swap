@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 17:55:28 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 18:03:34 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:40:45 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void		ft_chr_and_fill(char **str, char c, int count)
 {
-	int 	i;
+	int	i;
 
 	i = 0;
-	while(i < count)
+	while (i < count)
 		(*str)[i++] = c;
 	(*str)[count] = '\0';
 }

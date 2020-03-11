@@ -6,16 +6,16 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:19:50 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 20:16:37 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:25:13 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void		change_index(t_stack *stack_a, t_stack *stack_b)
+void	change_index(t_stack *stack_a, t_stack *stack_b)
 {
-	int 	i;
-	int 	j;
+	int		i;
+	int		j;
 
 	i = stack_a->used_size - 1;
 	j = stack_b->used_size - 1;

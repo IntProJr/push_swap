@@ -6,15 +6,15 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 13:50:56 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 13:50:56 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:33:37 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 	find_over_value(t_stack *stack_a)
+int		find_over_value(t_stack *stack_a)
 {
-	int 	i;
+	int		i;
 	int		mean;
 
 	i = 0;

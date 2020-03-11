@@ -6,16 +6,16 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 14:51:51 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 16:01:38 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:35:33 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 		check_args(int argc, char *argv[])
+int		check_args(int argc, char *argv[])
 {
-	int 		i;
-	int 		j;
+	int		i;
+	int		j;
 
 	i = 1;
 	while (i < argc)
@@ -32,7 +32,7 @@ int 		check_args(int argc, char *argv[])
 	return (0);
 }
 
-int	validate_arg(char *str)
+int		validate_arg(char *str)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ int	validate_arg(char *str)
 	return (i);
 }
 
-int	validate_args(char **arr)
+int		validate_args(char **arr)
 {
 	int	i;
 

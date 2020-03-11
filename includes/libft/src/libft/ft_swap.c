@@ -14,7 +14,7 @@
 
 void		ft_swap(int *stack, int left, int right)
 {
-	int 	tmp;
+	int		tmp;
 
 	tmp = stack[left];
 	stack[left] = stack[right];

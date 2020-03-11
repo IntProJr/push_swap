@@ -6,84 +6,75 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 21:53:30 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 13:45:16 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 13:53:26 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void	kick_less_values(t_stack *stack_a, t_stack *stack_b, int value)
+void	kick_less_values(t_stack *a, t_stack *b, int value)
 {
-	int 	i;
+	int	i;
 
-	i = stack_a->used_size - 1;
-	while (less_sort(stack_a, value) == -1)
+	i = a->used_size - 1;
+	while (less_sort(a, value) == -1)
 	{
-		i = stack_a->used_size - 1;
-		if (stack_a->array[i].index != stack_a->min &&
-		stack_a->array[i].index != stack_a->max &&
-		stack_a->array[i].index <= value)
-			push_b(stack_a, stack_b);
+		i = a->used_size - 1;
+		if (a->array[i].index != a->min && a->array[i].index != a->max &&
+			a->array[i].index <= value)
+			push_b(a, b);
 		else
-			rotate_a(stack_a);
+			rotate_a(a);
 	}
 }
 
-
-
-void	kick_more_values(t_stack *stack_a, t_stack *stack_b, int value)
+void	kick_more_values(t_stack *a, t_stack *b, int value)
 {
-	int i;
+	int	i;
 
-	i = stack_a->used_size - 1;
-	while (more_sort(stack_a, value) == -1)
+	i = a->used_size - 1;
+	while (more_sort(a, value) == -1)
 	{
-		i = stack_a->used_size - 1;
-		if (stack_a->array[i].index != stack_a->min &&
-		stack_a->array[i].index != stack_a->max &&
-		stack_a->array[i].index >= value)
-			push_b(stack_a, stack_b);
+		i = a->used_size - 1;
+		if (a->array[i].index != a->min && a->array[i].index != a->max &&
+			a->array[i].index >= value)
+			push_b(a, b);
 		else
-			rotate_a(stack_a);
+			rotate_a(a);
 	}
 }
 
-void	kick_values_in_range(t_stack *stack_a, t_stack *stack_b,
-		int bottom, int top)
+void	kick_values_in_range(t_stack *a, t_stack *b, int bottom, int top)
 {
-	int		i;
+	int	i;
 
-	i = stack_a->used_size - 1;
-	while(range_sort(stack_a, bottom, top) == -1)
+	i = a->used_size - 1;
+	while (range_sort(a, bottom, top) == -1)
 	{
-		i = stack_a->used_size - 1;
-		if (stack_a->array[i].index != stack_a->min &&
-		stack_a->array[i].index != stack_a->max &&
-		stack_a->array[i].index > bottom && stack_a->array[i].index < top)
-			push_b(stack_a, stack_b);
+		i = a->used_size - 1;
+		if (a->array[i].index != a->min && a->array[i].index != a->max &&
+			a->array[i].index > bottom && a->array[i].index < top)
+			push_b(a, b);
 		else
-			rotate_a(stack_a);
+			rotate_a(a);
 	}
 }
 
-void	kick_to_b_except(t_stack *stack_a, t_stack *stack_b,
-		int hold_min, int hold_max)
+void	kick_to_b_except(t_stack *a, t_stack *b, int h_min, int h_max)
 {
-	int 	i;
-	int		over_value;
+	int	i;
+	int	aver_val;
 
-	over_value = find_over_value(stack_a);
-	i = stack_a->used_size - 1;
-	kick_more_values(stack_a, stack_b, hold_max);
-	kick_values_in_range(stack_a, stack_b, hold_min, hold_max);
-	kick_less_values(stack_a, stack_b, hold_min);
-
-
+	aver_val = find_over_value(a);
+	i = a->used_size - 1;
+	kick_more_values(a, b, h_max);
+	kick_values_in_range(a, b, h_min, h_max);
+	kick_less_values(a, b, h_min);
 }
 
-void 	kick_val_to_top(t_stack *a, int val)
+void	kick_val_to_top(t_stack *a, int val)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (i < a->used_size && a->array[i].index != val)
@@ -95,7 +86,7 @@ void 	kick_val_to_top(t_stack *a, int val)
 	}
 	else
 	{
-		while (a->array[a->used_size - 1]. index != val)
+		while (a->array[a->used_size - 1].index != val)
 			rotate_a(a);
 	}
 }

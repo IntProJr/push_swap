@@ -12,45 +12,45 @@
 
 #include "./includes/push_swap.h"
 
-void		swap(int *a,int *b)
+void	swap(int *a, int *b)
 {
-	int 	tmp;
+	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-int 		partition(t_num *array, int low, int high)
+int		partition(t_num *arr, int low, int high)
 {
-	int	pivot;
-	int	i;
-	int j;
+	int pivot;
+	int i;
+	int	j;
 
-	i = low - 1;
-	pivot = array[high].value;
+	i = (low - 1);
+	pivot = arr[high].value;
 	j = low;
 	while (j <= high)
 	{
-		if (array[j].value > pivot)
+		if (arr[j].value > pivot)
 		{
 			i++;
-			swap(&array[i].value, &array[j].value);
+			swap(&arr[i].value, &arr[j].value);
 		}
 		j++;
 	}
-	swap(&array[i + 1].value, &array[high].value);
+	swap(&arr[i + 1].value, &arr[high].value);
 	return (i + 1);
 }
 
-void		quick_sort(t_num *array, int low, int high)
+void	quick_sort(t_num *arr, int low, int high)
 {
-	int		pivot;
+	int	pi;
 
 	if (low < high)
 	{
-		pivot = partition(array, low, high);
-		quick_sort(array, low, pivot - 1);
-		quick_sort(array, pivot + 1, high);
+		pi = partition(arr, low, high);
+		quick_sort(arr, low, pi - 1);
+		quick_sort(arr, pi + 1, high);
 	}
-
 }

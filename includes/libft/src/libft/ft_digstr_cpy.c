@@ -14,8 +14,8 @@
 
 int		*ft_digstr_cpy(int *stack, int size)
 {
-	int 	*s_a;
-	int 	i;
+	int		*s_a;
+	int		i;
 
 	i = 0;
 	s_a = NULL;

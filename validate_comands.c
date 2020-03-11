@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 14:18:17 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 14:24:51 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 14:25:00 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ int		validate_commands(char *line)
 	else
 		return (-1);
 }
-

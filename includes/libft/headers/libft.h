@@ -6,7 +6,7 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 20:01:23 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:00:38 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:40:02 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 
 # define BUFF_SIZE 32
 
-typedef struct	s_list
+typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
 
 int					ft_atoi(char const *str);
 int					ft_atoi_base(const char *str, int str_base);
@@ -103,5 +103,4 @@ int					*ft_digstr_cpy(int *stack, int size);
 int					take_power(int num);
 void				ft_swap(int *stack, int left, int right);
 void				del_matrix(char **matrix);
-
 #endif

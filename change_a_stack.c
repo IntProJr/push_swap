@@ -43,7 +43,7 @@ void	push_a(t_stack *a, t_stack *b)
 	ft_printf("pa\n");
 }
 
-void 	rotate_a(t_stack *a)
+void	rotate_a(t_stack *a)
 {
 	rotate_stk(a);
 	ft_printf("ra\n");

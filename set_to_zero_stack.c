@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:27:05 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 19:59:02 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:34:18 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void		set_to_zero_stack(t_stack *stack_b)
 {
 	int		i;
+
 	i = stack_b->used_size - 1;
 	while (i >= 0)
 	{

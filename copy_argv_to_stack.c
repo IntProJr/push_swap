@@ -6,13 +6,13 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:51:10 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 17:58:38 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 16:27:41 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int			value_validation(long value, char *line)
+int		value_validation(long value, char *line)
 {
 	if ((value = ft_atoi(line)) > 2147483647 || value <= -2147483648 ||
 		(value > 0 && line[0] == '-') ||
@@ -21,9 +21,9 @@ int			value_validation(long value, char *line)
 	return (0);
 }
 
-int 	get_len_array(char **array)
+int		get_len_array(char **array)
 {
-	int 	len;
+	int		len;
 
 	len = 0;
 	while (array[len])
@@ -31,12 +31,12 @@ int 	get_len_array(char **array)
 	return (len);
 }
 
-t_num 	*copy_argv_to_stack(char **array, t_stack *stack)
+t_num	*copy_argv_to_stack(char **array, t_stack *stack)
 {
-	t_num 	number;
-	long 	value;
-	int 	i;
-	int 	len;
+	t_num	number;
+	long	value;
+	int		i;
+	int		len;
 
 	i = 0;
 	len = get_len_array(array);
