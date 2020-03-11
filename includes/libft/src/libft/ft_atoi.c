@@ -6,36 +6,50 @@
 /*   By: lrosalee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 16:27:14 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/03 16:16:46 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 22:22:42 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/libft.h"
 #include <limits.h>
 
-int	ft_atoi(const char *str)
+static int	prov(const char *str, int i, int flag)
 {
-	unsigned long int	result;
-	size_t				i;
-	int					znak;
+	unsigned long long n;
 
-	result = 0;
-	i = 0;
-	znak = 1;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13) || str[i] == '+')
-		i++;
-	if (str[i] == '-')
+	n = 0;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		znak = -1;
+		n *= 10;
+		n += str[i] - '0';
+		if (n > 9223372036854775807)
+		{
+			if (flag == -1)
+				return (0);
+			return (-1);
+		}
 		i++;
 	}
-	while ((str[i] >= 48 && str[i] <= 57) && str[i] != '\0')
-		result = result * 10 + (str[i++] - 48);
-	if (result > 9223372036854775807 && znak == -1)
+	if ((n > 2147483648 && flag == -1) || (n > 2147483647 && flag == 1))
 		return (0);
-	else if (result == 9223372036854775807 && znak == -1)
-		return (1);
-	else if (result > 9223372036854775807 && znak == 1)
-		return (-1);
-	return ((int)result * znak);
+	return (n * flag);
+}
+
+int			ft_atoi(const char *str)
+{
+	int					i;
+	int					flag;
+
+	i = 0;
+	flag = 1;
+	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' || str[i] == '\r'
+		   || str[i] == '\f' || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			flag = -1;
+		i++;
+	}
+	return (prov(str, i, flag));
 }

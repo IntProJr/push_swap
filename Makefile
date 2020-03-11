@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/11 16:12:42 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/11 16:13:05 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,13 +40,12 @@ SRC1 	= 		change_a_stack.c \
           		kick_values.c \
           		sorting_check.c \
           		search_values.c \
-
+          		print_stack.c \
+          		help_for_parser.c \
 
 SRC2 	=       commands_list_functions.c \
                 validate_comands.c \
                 change_stacks_no_output.c \
-
-
 
 OBJSFD 	= temporary
 

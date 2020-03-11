@@ -141,4 +141,6 @@ add_executable(push_swap
 		change_stacks_no_output.c
 		commands_list_functions.c
 		validate_comands.c
-		unit_moves.c)
+		unit_moves.c
+		print_stack.c
+		help_for_parser.c)

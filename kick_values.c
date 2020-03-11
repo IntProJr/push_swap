@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 21:53:30 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 13:53:26 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 19:54:07 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,13 @@ void	kick_values_in_range(t_stack *a, t_stack *b, int bottom, int top)
 
 void	kick_to_b_except(t_stack *a, t_stack *b, int h_min, int h_max)
 {
-	int	i;
-	int	aver_val;
-
-	aver_val = find_over_value(a);
-	i = a->used_size - 1;
+	ft_printf("%d %d\n", h_max, h_min);
 	kick_more_values(a, b, h_max);
+	print_stack(a, b);
 	kick_values_in_range(a, b, h_min, h_max);
+	print_stack(a, b);
 	kick_less_values(a, b, h_min);
+	print_stack(a, b);
 }
 
 void	kick_val_to_top(t_stack *a, int val)

@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:12:19 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/09 18:12:19 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 19:35:56 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,36 +21,36 @@ void	swap(int *a, int *b)
 	*b = tmp;
 }
 
-int		partition(t_num *arr, int low, int high)
+int		partition(t_num *array, int low, int high)
 {
 	int pivot;
 	int i;
 	int	j;
 
 	i = (low - 1);
-	pivot = arr[high].value;
+	pivot = array[high].value;
 	j = low;
 	while (j <= high)
 	{
-		if (arr[j].value > pivot)
+		if (array[j].value > pivot)
 		{
 			i++;
-			swap(&arr[i].value, &arr[j].value);
+			swap(&array[i].value, &array[j].value);
 		}
 		j++;
 	}
-	swap(&arr[i + 1].value, &arr[high].value);
+	swap(&array[i + 1].value, &array[high].value);
 	return (i + 1);
 }
 
-void	quick_sort(t_num *arr, int low, int high)
+void	quick_sort(t_num *array, int low, int high)
 {
-	int	pi;
+	int	pivot;
 
-	if (low < high)
+ 	if (low < high)
 	{
-		pi = partition(arr, low, high);
-		quick_sort(arr, low, pi - 1);
-		quick_sort(arr, pi + 1, high);
+		pivot = partition(array, low, high);
+		quick_sort(array, low, pivot - 1);
+		quick_sort(array, pivot + 1, high);
 	}
 }

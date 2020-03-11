@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:51:10 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 16:27:41 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 22:42:57 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,22 @@ t_num	*copy_argv_to_stack(char **array, t_stack *stack)
 	{
 		num_initialization(&number);
 		value = ft_atoi(array[len]);
+		if (!(check_valid_number(array[len], (int)value)))
+		{
+			ft_printf("Error");
+			return (NULL);
+		}
+		if (value == 0 && array[len][0] != '0')
+		{
+			ft_printf("Error");
+			return (NULL);
+		}
 		if (value_validation(value, array[len]) == -1)
 		{
 			free(stack->array);
 			return (NULL);
 		}
-		number.value = value;
+		number.value = (int)value;
 		number.index = i + 1;
 		stack->array[i++] = number;
 	}
