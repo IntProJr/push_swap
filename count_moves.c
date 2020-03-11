@@ -77,6 +77,7 @@ t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 		ft_printf ("%d", val.rb);
 	}
 	val = count_stack_a_moves(a, val);
+	val = unit_moves(val);
 	return (val);
 }
 

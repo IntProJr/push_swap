@@ -6,7 +6,7 @@
 #    By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 15:48:56 by lrosalee          #+#    #+#              #
-#    Updated: 2020/03/11 15:19:32 by lrosalee         ###   ########.fr        #
+#    Updated: 2020/03/11 15:39:01 by lrosalee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC1 	= 		change_a_stack.c \
           		change_stack_fun.c \
           		copy_argv_to_stack.c \
           		count_moves.c \
+          		unit_moves.c \
           		create_stack.c \
           		delete_stack.c \
           		do_moves.c \
@@ -36,7 +37,7 @@ SRC1 	= 		change_a_stack.c \
           		kick_values.c \
           		sorting_check.c \
           		search_values.c \
-          		sorting_check.c \
+
 
 SRC2 	=       main_checker.c \
                 commands_list_functions.c \

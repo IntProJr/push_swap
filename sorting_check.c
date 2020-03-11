@@ -6,26 +6,24 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 20:40:28 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 21:21:49 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 15:35:04 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 	range_sort(t_stack *stack_a, int bottom, int top)
+int		range_sort(t_stack *a, int bottom, int top)
 {
-	int 	i;
+	int	i;
 
-	if (stack_a == NULL)
+	if (a == NULL)
 		return (-1);
-	i = stack_a->used_size - 1;
+	i = a->used_size - 1;
 	while (i >= 0)
 	{
-		if (stack_a->array[i].index != stack_a->min &&
-		stack_a->array[i].index != stack_a->max)
+		if (a->array[i].index != a->min && a->array[i].index != a->max)
 		{
-			if (stack_a->array[i].index > bottom &&
-			stack_a->array[i].index < top)
+			if (a->array[i].index > bottom && a->array[i].index < top)
 				return (-1);
 		}
 		i--;
@@ -33,78 +31,76 @@ int 	range_sort(t_stack *stack_a, int bottom, int top)
 	return (0);
 }
 
-int 	more_sort(t_stack *stack_a, int mid)
+int		more_sort(t_stack *a, int med)
 {
-	int 	i;
+	int	i;
 
-	if (stack_a == NULL)
+	if (a == NULL)
 		return (-1);
-	i = stack_a->used_size - 1;
+	i = a->used_size - 1;
 	while (i >= 0)
 	{
-		if (stack_a->array[i].index != stack_a->max &&
-		stack_a->array[i].index >= mid)
+		if (a->array[i].index != a->max && a->array[i].index >= med)
 			return (-1);
 		i--;
 	}
 	return (0);
 }
 
-int 	less_sort(t_stack *stack_a, int mid)
+int		less_sort(t_stack *a, int med)
 {
-	int 	i;
+	int	i;
 
-	if (stack_a == NULL)
+	if (a == NULL)
 		return (-1);
-	i = stack_a->used_size - 1;
+	i = a->used_size - 1;
 	while (i >= 0)
 	{
-		if (stack_a->array[i].index != stack_a->min &&
-		stack_a->array[i].index <= mid)
+		if (a->array[i].index != a->min && a->array[i].index <= med)
 			return (-1);
 		i--;
 	}
 	return (0);
 }
 
-int 	sorting(t_stack *stack_a)
+int		sorting(t_stack *a)
 {
-	int		i;
+	int	i;
 
-	if (stack_a == NULL)
+	if (a == NULL)
 		return (-1);
-	i = stack_a->used_size - 1;
+	i = a->used_size - 1;
 	while (i > 0)
 	{
-		if (stack_a->array[i].value > stack_a->array[i - 1].value)
+		if (a->array[i].value > a->array[i - 1].value)
 			return (1);
 		i--;
 	}
 	return (0);
 }
 
-int		duplication(t_stack *stack_a)
+int		duplication(t_stack *a)
 {
 	int	i;
 	int	j;
-	int	duplicate;
+	int	f;
 
-	if (stack_a == NULL)
+	if (a == NULL)
 		return (-1);
-	i = stack_a->used_size - 1;
+	i = a->used_size - 1;
 	j = 0;
-	duplicate = 0;
+	f = 0;
 	while (i >= 0)
 	{
 		j = 0;
-		duplicate = 0;
-		while (j < stack_a->used_size)
+		f = 0;
+		while (j < a->used_size)
 		{
-			if (stack_a->array[i].value == stack_a->array[j].value)
-				duplicate++;
+			if (a->array[i].value == a->array[j].value)
+				f++;
 			j++;
 		}
-		if (duplicate > 1)
+		if (f > 1)
 			return (1);
 		i--;
 	}
