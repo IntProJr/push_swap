@@ -6,27 +6,30 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 21:53:30 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 20:40:25 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 13:45:16 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int 	find_over_value(t_stack *stack_a)
+void	kick_less_values(t_stack *stack_a, t_stack *stack_b, int value)
 {
 	int 	i;
-	int		mean;
 
-	i = 0;
-	mean = 0;
-	while (i < stack_a->used_size)
+	i = stack_a->used_size - 1;
+	while (less_sort(stack_a, value) == -1)
 	{
-		mean += stack_a->array[i].index;
-		i++;
+		i = stack_a->used_size - 1;
+		if (stack_a->array[i].index != stack_a->min &&
+		stack_a->array[i].index != stack_a->max &&
+		stack_a->array[i].index <= value)
+			push_b(stack_a, stack_b);
+		else
+			rotate_a(stack_a);
 	}
-	mean /= stack_a->used_size;
-	return (mean);
 }
+
+
 
 void	kick_more_values(t_stack *stack_a, t_stack *stack_b, int value)
 {
@@ -73,6 +76,7 @@ void	kick_to_b_except(t_stack *stack_a, t_stack *stack_b,
 	i = stack_a->used_size - 1;
 	kick_more_values(stack_a, stack_b, hold_max);
 	kick_values_in_range(stack_a, stack_b, hold_min, hold_max);
+	kick_less_values(stack_a, stack_b, hold_min);
 
 
 }

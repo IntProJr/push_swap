@@ -12,11 +12,6 @@
 
 #include "./includes/push_swap.h"
 
-/*
-** Проверка наличия первого аргумента, функция вернёт '0' при отсутствии
-** параметров или non-printable characters
-*/
-
 int 		check_args(int argc, char *argv[])
 {
 	int 		i;

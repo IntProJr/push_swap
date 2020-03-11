@@ -32,6 +32,11 @@ void	sort_stacks(t_stack *stack_a, t_stack *stack_b, int hold_min, int hold_max)
 {
 	kick_to_b_except(stack_a, stack_b, hold_min, hold_max);
 	count_moves(stack_a, stack_b);
+	{
+		count_moves(stack_a, stack_b);
+		do_moves(stack_a, stack_b);
+	}
+	kick_val_to_top(stack_a, stack_a->max);
 }
 
 void	push_swap(int argc, char **argv)

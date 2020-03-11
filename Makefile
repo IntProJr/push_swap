@@ -35,6 +35,7 @@ SRC1 	= 		change_a_stack.c \
           		validation.c \
           		kick_values.c \
           		sorting_check.c \
+          		search_values.c \
 
 SRC2 	= *.c
 

@@ -50,6 +50,23 @@ int 	more_sort(t_stack *stack_a, int mid)
 	return (0);
 }
 
+int 	less_sort(t_stack *stack_a, int mid)
+{
+	int 	i;
+
+	if (stack_a == NULL)
+		return (-1);
+	i = stack_a->used_size - 1;
+	while (i >= 0)
+	{
+		if (stack_a->array[i].index != stack_a->min &&
+		stack_a->array[i].index <= mid)
+			return (-1);
+		i--;
+	}
+	return (0);
+}
+
 int 	sorting(t_stack *stack_a)
 {
 	int		i;

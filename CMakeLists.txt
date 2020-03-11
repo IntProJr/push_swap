@@ -128,11 +128,13 @@ add_executable(push_swap
 		do_moves.c
 		error.c
 		find_min_max.c
-		main_pw.c
 		push_swap.c
 		quick_sort.c
 		set_to_zero_stack.c
 		small_sort.c
 		validation.c
 		kick_values.c
-		sorting_check.c)
+		sorting_check.c
+		search_values.c
+		main_pw.c
+		main_checker.c)

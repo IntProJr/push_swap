@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 20:00:54 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/11 14:17:33 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ typedef struct	s_stack
 	char	name;
 }				t_stack;
 
+typedef struct	s_commands
+{
+	char				*command;
+	struct s_commands	*next;
+}				t_commands;
 
 int 		check_args(int argc, char *argv[]);
 int			validate_arg(char *str);
@@ -77,10 +82,14 @@ void		do_moves(t_stack *a, t_stack *b);
 void 		kick_val_to_top(t_stack *a, int val);
 void		del_arrays(char **arr, t_stack *stack_a);
 void		sort_three(t_stack *a);
-int 	more_sort(t_stack *stack_a, int mid);
-void	kick_to_b_except(t_stack *stack_a, t_stack *stack_b,
+int 		more_sort(t_stack *stack_a, int mid);
+void		kick_to_b_except(t_stack *stack_a, t_stack *stack_b,
 						 int hold_min, int hold_max);
-int 	range_sort(t_stack *stack_a, int bottom, int top);
-
+int 		range_sort(t_stack *stack_a, int bottom, int top);
+int 		less_sort(t_stack *stack_a, int mid);
+int 		find_over_value(t_stack *stack_a);
+void		checker(int argc, char *argv[]);
+t_commands	*add_command(t_commands *head, char *line, int fun);
+int		validate_commands(char *line);
 
 # endif

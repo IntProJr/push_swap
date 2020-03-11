@@ -72,20 +72,23 @@ t_num 	count_moves_for_num(t_stack *a, t_stack *b, t_num val, int i)
 	if (i < half)
 		val.rrb = i + 1;
 	else if (i >= half)
+	{
 		val.rb = b->used_size - 1 - i;
+		ft_printf ("%d", val.rb);
+	}
 	val = count_stack_a_moves(a, val);
-	//value = unit_moves(value);
 	return (val);
 }
 
-void	count_moves(t_stack *a, t_stack *b)
+void	count_moves(t_stack *stack_a, t_stack *stack_b)
 {
 	int	i;
 
-	i = b->used_size - 1;
+	i = stack_b->used_size - 1;
 	while (i >= 0)
 	{
-		b->array[i] = count_moves_for_num(a, b, b->array[i], i);
+		stack_b->array[i] = count_moves_for_num(stack_a,
+				stack_b, stack_b->array[i], i);
 		i--;
 	}
 }

@@ -20,6 +20,17 @@ void	swap_a(t_stack *a)
 	ft_printf("sa\n");
 }
 
+void	push_stack_a(t_stack *a, t_stack *b)
+{
+	if (b->used_size == 0)
+		return ;
+	a->used_size++;
+	a->array[a->used_size - 1].index = b->array[b->used_size - 1].index;
+	a->array[a->used_size - 1].value = b->array[b->used_size - 1].value;
+	b->array[b->used_size - 1].index = -1;
+	b->used_size--;
+}
+
 void	push_a(t_stack *a, t_stack *b)
 {
 	if (b->used_size == 0)
