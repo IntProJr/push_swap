@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 15:20:47 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 19:35:04 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "libft/headers/libft.h"
-
-# define IS_EMPTY(index) ((index == -1) ? -1 : 0)
 
 typedef struct	s_num
 {
@@ -27,7 +25,6 @@ typedef struct	s_num
 	int		rra;
 	int		rrb;
 	int		rrr;
-	int		v_flag;
 	int		swap;
 	int		total_moves;
 }				t_num;
@@ -103,7 +100,6 @@ void			rev_rotate_stcks(t_stack *a, t_stack *b);
 void			push_stack_a(t_stack *a, t_stack *b);
 void			push_stack_b(t_stack *a, t_stack *b);
 t_num			unit_moves(t_num val);
-void			print_stack(t_stack *a, t_stack *b);
-int		check_valid_number(char *num_str, int num);
+int				check_valid_number(char *num_str, int num);
 
 #endif

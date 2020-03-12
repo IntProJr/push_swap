@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 15:51:10 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 22:42:57 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ int		get_len_array(char **array)
 	return (len);
 }
 
+int		check_num(char **array, int len, int value, t_stack *stack)
+{
+	if (!(check_valid_number(array[len], (int)value)))
+	{
+		return (1);
+	}
+	if (value == 0 && array[len][0] != '0')
+	{
+		ft_printf("Error\n");
+		return (1);
+	}
+	if (value_validation(value, array[len]) == -1)
+	{
+		free(stack->array);
+		return (1);
+	}
+	return (0);
+}
+
 t_num	*copy_argv_to_stack(char **array, t_stack *stack)
 {
 	t_num	number;
@@ -46,17 +65,7 @@ t_num	*copy_argv_to_stack(char **array, t_stack *stack)
 	{
 		num_initialization(&number);
 		value = ft_atoi(array[len]);
-		if (!(check_valid_number(array[len], (int)value)))
-		{
-			ft_printf("Error");
-			return (NULL);
-		}
-		if (value == 0 && array[len][0] != '0')
-		{
-			ft_printf("Error");
-			return (NULL);
-		}
-		if (value_validation(value, array[len]) == -1)
+		if (check_num(array, len, value, stack) == 1)
 		{
 			free(stack->array);
 			return (NULL);

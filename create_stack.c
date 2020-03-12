@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 16:15:00 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/10 18:29:11 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ void		num_initialization(t_num *n)
 
 void		del_arrays(char **arr, t_stack *stack_a)
 {
-	del_matrix(arr);
+	if (arr != NULL)
+		del_matrix(arr);
 	free(arr);
 	free(stack_a);
 	ft_printf("Error\n");

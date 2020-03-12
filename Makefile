@@ -40,7 +40,6 @@ SRC1 	= 		change_a_stack.c \
           		kick_values.c \
           		sorting_check.c \
           		search_values.c \
-          		print_stack.c \
           		help_for_parser.c \
 
 SRC2 	=       commands_list_functions.c \
@@ -66,8 +65,8 @@ all: $(LIBFT) $(NAME1) $(NAME2)
 $(OBJSFD):
 	mkdir $@
 
-$(OBJSFD)/%.o: %.c | $(OBJSFD)
-	$(CC) $(CFLAGS) $(HDR) $(LIBFT_HDR) -c $< -o $@
+$(OBJSFD)/%.o: %.c ./includes/push_swap.h | $(OBJSFD)
+	gcc $(CFLAGS) $(HDR) $(LIBFT_HDR) -c $< -o $@
 
 $(LIBFT):
 	make -C ./includes/libft

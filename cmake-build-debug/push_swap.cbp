@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="push_swap"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lrosalee/Desktop/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lrosalee/Desktop/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lrosalee/Desktop/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap">
+				<Option output="/Users/lrosalee/Desktop/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lrosalee/Desktop/push_swap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lrosalee/Desktop/push_swap/includes"/>
+					<Add directory="/Users/lrosalee/Desktop/push_swap/includes/libft/headers"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap/fast">
+				<Option output="/Users/lrosalee/Desktop/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lrosalee/Desktop/push_swap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lrosalee/Desktop/push_swap/includes"/>
+					<Add directory="/Users/lrosalee/Desktop/push_swap/includes/libft/headers"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/lrosalee/Desktop/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/change_a_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/change_b_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/change_both_stacks.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/change_stack_fun.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/change_stacks_no_output.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/commands_list_functions.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/copy_argv_to_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/count_moves.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/create_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/delete_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/do_moves.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/error.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/find_min_max.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/help_for_parser.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/headers/ft_printf.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/headers/get_next_line.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/headers/libft.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/char/print_cs.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/char/print_ptr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/flag.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/flag_manager_f.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/float_to_string.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/ft_printf.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/length.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/float_to_string.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_di.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_f.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_number.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_o.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_u.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/numbers/print_x.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/parse.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/precision.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_cs.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_di.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_f.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_flag.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_number.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_o.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_padding.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_ptr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_u.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/print_x.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/round_ld.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/flag.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/flag_manager_f.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/length.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/precision.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/print_flag.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/print_padding.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/round_ld.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/tools/width.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/ft_printf/width.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/get_next_line/get_next_line.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_abs.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_atoi.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_atoi_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_bzero.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_chr_and_fill.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_clear_mass.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_del_matrix.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_digstr_cpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_fact.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_hex_len.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isalnum.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isalpha.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isascii.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isdigit.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isprint.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_isspace.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_itoa.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_len_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_longlong_len.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstadd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstdelone.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstiter.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstmap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_lstnew.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memalloc.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memccpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memcmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memcpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memmove.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_memset.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_min.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_pow.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_print_u_hex.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_ptr_len_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_put_longlong_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_put_u_longlong_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putchar.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putchar_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putendl.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putendl_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putnbr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putnbr_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putnchar.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putnstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_putstr_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_realloc.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_sqrt.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_str_multi_chr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strcat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strclr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strcmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strcpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strdup.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strequ.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_striter.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_striteri.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strjoin.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strlcat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strlen.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strmap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strmapi.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strncat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strncmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strncpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strndup.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strnequ.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strnew.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strnstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strrchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strsplit.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strsub.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_strtrim.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_tolower.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_toupper.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_u_len_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_u_longlong_len.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/libft/src/libft/ft_wordcount.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/includes/push_swap.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/kick_values.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/main_checker.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/main_pw.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/push_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/quick_sort.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/search_values.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/set_to_zero_stack.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/small_sort.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/sorting_check.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/unit_moves.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/validate_comands.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/validation.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/lrosalee/Desktop/push_swap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

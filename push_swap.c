@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 14:02:52 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 19:48:21 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	push_swap(int argc, char **argv)
 	}
 	b = create_second_stack(a);
 	quick_sort(b->array, 0, b->used_size - 1);
-	print_stack(a, b);
 	change_index(a, b);
 	hold_min = b->array[a->used_size / 3].index;
 	hold_max = b->array[a->used_size - a->used_size / 3].index;
@@ -66,7 +65,6 @@ void	push_swap(int argc, char **argv)
 		sort_small(a, b);
 	else if (a->used_size > 5)
 		sort_stacks(a, b, hold_min, hold_max);
-	print_stack(a, b);
 	del_stack(a);
 	del_stack(b);
 }

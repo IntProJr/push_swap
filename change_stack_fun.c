@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:40:18 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 16:26:13 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	rotate_stk(t_stack *stk)
 	t_num	tmp;
 	int		i;
 
+	if (stk->used_size < 1)
+		return ;
 	i = stk->used_size - 1;
 	tmp = stk->array[i];
 	while (i > 0)

@@ -6,7 +6,7 @@
 /*   By: lrosalee <lrosalee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 18:12:19 by lrosalee          #+#    #+#             */
-/*   Updated: 2020/03/11 19:35:56 by lrosalee         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:13:59 by lrosalee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	quick_sort(t_num *array, int low, int high)
 {
 	int	pivot;
 
- 	if (low < high)
+	if (low < high)
 	{
 		pivot = partition(array, low, high);
 		quick_sort(array, low, pivot - 1);
